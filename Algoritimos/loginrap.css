@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2? family = Marvel & display = swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+    font-family: Marvel;
+}
+
+.container{
+    width: 80vw;
+    height: 10vh;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header{
+    color: #FFFFFF;
+    /* height: 5vh; */
+    box-shadow: 13px -5px 10px;
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    height: 60px;
+    z-index: 2;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selecionado {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.container h1{
+    /* font-weight: lighter; */
+    margin: 0;
+    height: max-content;
+    color: #414141;
+    font-size: 40px;
+}
+
+
+.imagemlogo {
+    height: 35vh;
+    margin-right: 5%;
+    padding: 15px;
+}
+
+button {
+    background-color: #FFFFFF;
+    color: #000000;
+    height: 35px;
+    width: 100px;
+    border-radius: 20px;
+    font-family: Chivo;
+    border: 1px solid #451345 ;
+    
+}
+
+button:hover{
+    background-color: #451345;
+    color: #FFFFFF;
+}
+
+.navbar{
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.banner-login {
+    color: white;
+    height: 550px;
+    /* border: 3px solid yellow; */
+    background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
+    background-size: cover;
+  }
+  
+  .banner-login .container {
+    height: 550px;
+    /* border: 3px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-login {
+    color: #000000;
+  }
+  
+  .banner-login .card {
+    background-color: #e5e5e5;
+    height: 400px;
+    width: 90vh;
+    display: flex;
+    justify-content: center;
+    /* align-content: space-around; */
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    border-radius: 30px;
+  }
+
+  .banner-login h1{
+      position: relative;
+      bottom: 60px;
+      font-family: Marvel;
+      color: #000000;
+  }
+  
+  .banner-login a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .banner-login #div_erros_login {
+    margin-top: 15px;
+  }
+  
+  button {
+    cursor: pointer;
+}
+
+input {
+    height: 30px;
+    border: 2px solid #b36b5d;
+    border-radius: 10px;
+  }
+  
+  .btn {
+    font-family: "Exo 2", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #b36b5d;
+    width: 120px;
+    align-self: center;
+}
+  
+  form {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    text-align: center;
+    /* margin: 50px ; */
+  }
+  
+  .loading-div {
+    width: 50px;
+    /* border: 3px solid pink; */
+    margin: auto;
+    display: none;
+}
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer {
+    background-color: #b36b5d;
+    height: 20px;
+    margin: 0;
+    /* margin-top: px; */
+    padding: 15px; 
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;  
+    font-family: Chivo;
+    color: #FFFFFF;
+  }  
+  
+  .footer .container {
+    display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      height: max-content;
+  }
+  
+  .footer .container span{
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .footer .container img{
+    height: 30px;
+    margin: 0 15px;
+  }
