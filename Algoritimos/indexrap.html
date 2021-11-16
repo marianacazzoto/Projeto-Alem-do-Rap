@@ -160,9 +160,10 @@
 
         <div class="acesso">
             <div class="container">
-                <h1>MAIS COMENTADAS</h1>
-
+                <h1 onclick="teste()" >MAIS COMENTADAS</h1>
+   
                 <div class="acessadas">
+                  <div id="mensagem"></div>
                     <div class="ouvidas">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
@@ -315,4 +316,12 @@ function initComparisons() {
 }
 
 initComparisons();
+
+
+function teste(){
+  var musicas = ['algumas frases','leal']
+
+  mensagem.innerHTML = musicas[musicas.length -1]
+
+}
 </script> 

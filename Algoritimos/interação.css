@@ -407,14 +407,16 @@ button:hover{
   .btn-logout {
     margin: 0;
     padding: 0;
-    width: 20%;
+    width: 10px;
     background-color: #32b9cd;
     color: white;
     border-radius: 10px;
-    text-align: center;
-    padding: 10px 15px;
+    /* text-align: center; */
+    /* padding: 10px 15px; */
     margin-bottom: 100px;
     cursor: pointer;
+    position: relative;
+    top: 180px;
   }
   
 .footer {
