@@ -167,7 +167,7 @@ body {
   color: white;
   background-color: #000000;
   width: 120px;
-  
+} 
 
 .publicacao-btn-editar {
   cursor: pointer;
@@ -349,4 +349,18 @@ body {
   color: white;
   background-color: #e6005a;
   margin: 5px;
+}
+
+.estilizar{
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#msg{
+  color: #000000;
+  background-color: #b36b5d;
 }

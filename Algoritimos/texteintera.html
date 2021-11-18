@@ -22,14 +22,27 @@
                 <h3>Sair</h3>
             </div>
 
+            
+
         </div>
     </div>
+
+
 
     <div class="dash-right">
 
         <div class="avisos">
             <div class="container">
-                <h1>Queremos te ententer - Fale Porque não gosta da musica escolhida</h1>
+                <h1>Fala que te escuto</h1>
+                <select class="estilizar" id="sel_musicas" onchange="escolhida()">
+                    <option value="">Escolha uma Musica</option>
+                    <option value="algumas_frases">Algumas Frases</option>
+                    <option value="levanta_e_anda">Levanta e Anda</option>
+                    <option value="acorde">Acorde</option>
+                    <option value="sucesso_na_vida">Sucesso na Vida</option>
+                    <option value="cancao_infantil">Canção Infantil</option>
+                    <option value="obstinado">Obstinado</option>
+                </select>
                 <div class="div-form">
                     <form id="form_postagem" method="post" onsubmit="return publicar()">
                         <label>
@@ -43,7 +56,16 @@
                             <br>
                             <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
                         </label>
+                        <br><br><br><br>
+                        <div id="msg"></div>
+                        <label>
+                            Descrição (máximo de 250 caracteres):
+                            <br>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>   
                         <br>
+                            
+                        <br><br>
                         <button>Enviar</button>
                     </form>
                 </div>
@@ -202,6 +224,16 @@
         finalizarAguardar();
 
         return false;
+    }
+
+    var ax_algumas = 1;
+    function escolhida(){
+
+        if(sel_musicas.value == 'algumas_frases'){
+            ax_algumas++;
+        }
+
+        msg.innerHTML = ax_algumas
     }
 
 </script>
