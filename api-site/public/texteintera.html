@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./texteintera.css">
+</head>
+<body>
+    <div class="janela">
+        <div class="header-left">
+            
+            <img src="./assets/ALÉM_DO_RAP-removebg-preview.png" class="imagemlogo" alt="imagem logo">
+         
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+
+
+    <div class="dash-right">
+
+        <div class="avisos">
+            <div class="container">
+                <h1>FALA QUE TE ESCUTO</h1> 
+                <!-- <img id="fonetitulo" src="./assets/fone-de-ouvido.png" alt="fone de ouvido">  -->
+                <select class="estilizar" id="sel_musicas" onchange="escolhida()">
+                    <option value="escolher">Escolha uma Musica</option>
+                    <option value="algumas_frases">Algumas Frases</option>
+                    <option value="levanta_e_anda">Levanta e Anda</option>
+                    <option value="acorde">Um Acorde</option>
+                    <option value="sucesso_na_vida">Sucesso na Vida</option>
+                    <option value="cancao_infantil">Canção Infantil</option>
+                    <option value="obstinado">Obstinado</option>
+                </select>
+                <br>
+                <br>
+                <img id="fone" src="./assets/Component 10 (2).png" alt="imagem fone">
+
+                <div id="videos" class="video_de_musicas">
+                    <div id="algumas" style="display: none;">
+                       
+                    </div>
+
+                    <div id="levanta" style="display: none;">
+                        <iframe width="450" height="215" src="https://www.youtube.com/embed/GZgnl5Ocuh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                        <div class="borda" id="msglevanta"></div><br>
+
+                        <span class="vizu" > <b id="vizulevanta" >0</b> Vizualizações</span>
+
+                        <div class="likes">
+                            <div class="sn_likes">
+                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
+                                <span> <b id="likesnegativos_levanta">0</b> </span>
+                            </div>
+
+                            <div class="sn_likes">
+                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
+                                <span> <b id="likespositivos_levanta">0</b> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="um_acorde" style="display: none;">
+                        <iframe width="450" height="215" src="https://www.youtube.com/embed/LizvFIA08e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                        <div class="borda" id="msgacorde"></div><br>
+
+                        <span class="vizu" > <b id="vizuacorde" >0</b> Vizualizações</span>
+
+                        <div class="likes">
+                            <div class="sn_likes">
+                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
+                                <span> <b id="likesnegativos_acorde">0</b> </span>
+                            </div>
+
+                            <div class="sn_likes">
+                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
+                                <span> <b id="likespositivos_acorde">0</b> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <div id="sucesso" style="display: none;">
+                        <iframe width="450" height="215" src="https://www.youtube.com/embed/H1HqUFeTaDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                        <div class="borda" id="msgsucesso"></div><br>
+
+                        <span> <b id="vizusucesso" >0</b> Vizualizações</span>
+
+                        <div class="likes">
+                            <div class="sn_likes">
+                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
+                                <span> <b id="likesnegativos">0</b> </span>
+                            </div>
+
+                            <div class="sn_likes">
+                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
+                                <span> <b id="likespositivos">0</b> </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="cancao" style="display: none;">
+                        <iframe width="450" height="215" src="https://www.youtube.com/embed/Ri-eF5PJ2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                        <div class="borda" id="msgcancao"></div><br>
+
+                        <span> <b id="vizucancao" >0</b> Vizualizações</span>
+
+                        <div class="likes">
+                            <div class="sn_likes">
+                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
+                                <span> <b id="likesnegativos">0</b> </span>
+                            </div>
+
+                            <div class="sn_likes">
+                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
+                                <span> <b id="likespositivos">0</b> </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="mus_obstinado" style="display: none;">
+                        <iframe width="450" height="215" src="https://www.youtube.com/embed/Ri-eF5PJ2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <div class="div-form">
+                    <form id="form_postagem" method="post" onsubmit="return publicar()">
+                        <label>
+                            Nome da Música:
+                            <br>
+                            <input name="titulo" id="titulo" maxlength="100" type="text">
+                        </label>
+                        <br>
+                        <br>
+                        <label>
+                            Criar publicação:
+                            <br>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="350" rows="5"></textarea>
+                        </label>
+
+                        
+
+                        <br><br>
+                        <button>Publicar</button>
+                        <br><br>
+                        <div id="mensagem" class="msg"></div>
+                        <br>
+
+                        <div class="mudanca">
+                            <h3>Sua Opnião Mudou? Comenta Aí!</h3>
+    
+                            <select class="estilizar" id="opnioes">
+                                <option value="">Selecione uma Opção</option>
+                                <option value="">Sim</option>
+                                <option value="">Não</option>
+                                <option value="">Talvez</option>
+                                <option value="">Um Pouco</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        <br>
+                        <label>
+                            Criar publicação:
+                            <br>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="350" rows="5"></textarea>
+                        </label>   
+                        <br>
+                        <br>
+                        <br>
+                        <button>Publicar</button>
+                    </form>
+                </div>
+                <h1>FEED</h1>
+                <div class="div-results">
+                    <div id="feed_container" class="feed-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_postagem").reset();
+    }
+
+    function publicar() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+        var corpo = {
+            titulo: form_postagem.titulo.value,
+            descricao: form_postagem.descricao.value
+        }
+
+        fetch(`/avisos/publicar/${idUsuario}`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                window.location = "/dashboard/mural.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+
+    }
+
+    function editar(idAviso) {
+        sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
+        console.log("cliquei em editar - " + idAviso);
+        window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
+        window.location = "/dashboard/edicao-aviso.html"
+
+    }
+
+    function deletar(idAviso) {
+        console.log("Criar função de apagar post escolhido - ID" + idAviso);
+
+    }
+
+    function atualizarFeed() {
+        //aguardar();
+        fetch("/avisos/listar").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feed_container");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("feed_container");
+                    feed.innerHTML = "";
+                    for (let i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+
+                        // criando e manipulando elementos do HTML via JavaScript
+                        var divPublicacao = document.createElement("div");
+                        var spanID = document.createElement("span");
+                        var spanTitulo = document.createElement("span");
+                        var spanNome = document.createElement("span");
+                        var divDescricao = document.createElement("div");
+                        var divButtons = document.createElement("div");
+                        var btnEditar = document.createElement("button");
+                        var btnDeletar = document.createElement("button");
+
+
+                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
+                        spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
+                        divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
+                        btnEditar.innerHTML = "Editar";
+                        btnDeletar.innerHTML = "Deletar";
+
+                        divPublicacao.className = "publicacao";
+                        spanTitulo.id = "inputNumero" + publicacao.idAviso;
+                        spanNome.className = "publicacao-nome";
+                        spanTitulo.className = "publicacao-titulo";
+                        divDescricao.className = "publicacao-descricao";
+
+                        divButtons.className = "div-buttons"
+
+                        btnEditar.className = "publicacao-btn-editar"
+                        btnEditar.id = "btnEditar" + publicacao.idAviso;
+                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
+
+                        btnDeletar.className = "publicacao-btn-editar"
+                        btnDeletar.id = "btnDeletar" + publicacao.idAviso;
+                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
+
+                        divPublicacao.appendChild(spanID);
+                        divPublicacao.appendChild(spanNome);
+                        divPublicacao.appendChild(spanTitulo);
+                        divPublicacao.appendChild(divDescricao);
+                        divPublicacao.appendChild(divButtons);
+                        divButtons.appendChild(btnEditar);
+                        divButtons.appendChild(btnDeletar);
+                        feed.appendChild(divPublicacao);
+                    }
+
+                    finalizarAguardar();
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+            finalizarAguardar();
+        });
+    }
+
+    function testar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+        divResultado.innerHTML = formulario.get("descricao");
+
+        finalizarAguardar();
+
+        return false;
+    }
+
+    var ax_algumas = 0;
+    var ax_levanta = 1;
+    var ax_acorde = 1;
+    var ax_sucesso = 1;
+    var ax_cancao = 1;
+    var ax_obstinado = 0;
+    
+    function escolhida(){
+
+        if(sel_musicas.value == 'escolher'){
+            fone.style.display = 'block';
+            levanta.style.display = 'none';
+            um_acorde.style.display = 'none ';
+            sucesso.style.display = 'none';
+            cancao.style.display = 'none';
+            mus_obstinado.style.display = 'none'
+        }
+        else if(sel_musicas.value == 'algumas_frases'){
+            ax_algumas++;
+            algumas.style.display = 'block';
+        }
+        
+        else if (sel_musicas.value == 'levanta_e_anda'){
+            vizulevanta.innerHTML = ax_levanta++;
+            levanta.style.display = 'block';
+            um_acorde.style.display = 'none ';
+            sucesso.style.display = 'none';
+            cancao.style.display = 'none';
+            mus_obstinado.style.display = 'none';
+            fone.style.display = 'none';
+            
+            msglevanta.innerHTML = 'Emicida - Levanta e anda (Feat. Rael)';
+        }
+        
+        else if (sel_musicas.value == 'acorde'){
+            vizuacorde.innerHTML = ax_acorde++;
+            um_acorde.style.display = 'block';
+            levanta.style.display = 'none';
+            sucesso.style.display = 'none';
+            cancao.style.display = 'none';
+            mus_obstinado.style.display = 'none';
+            fone.style.display = 'none';
+            
+            msgacorde.innerHTML = 'Coruja BC1 - Um Acorde (Feat. Zudizilla)';
+        }
+        
+        else if (sel_musicas.value == 'sucesso_na_vida'){
+            vizusucesso.innerHTML = ax_sucesso++;
+            sucesso.style.display = 'block';
+            levanta.style.display = 'none';
+            um_acorde.style.display = 'none ';
+            cancao.style.display = 'none';
+            mus_obstinado.style.display = 'none';
+            fone.style.display = 'none';
+            
+            msgsucesso.innerHTML = 'Choice & FBC - Sucesso Na Vida (Prod. NOBRU Black)';
+        }
+        
+        else if (sel_musicas.value == 'cancao_infantil'){
+            vizucancao.innerHTML = ax_cancao++;
+            cancao.style.display = 'block';
+            levanta.style.display = 'none';
+            um_acorde.style.display = 'none ';
+            sucesso.style.display = 'none';
+            mus_obstinado.style.display = 'none';
+            fone.style.display = 'none';
+            
+            msgcancao.innerHTML = 'Cesar MC - Canção Infantil part. Cristal (VideoClipe Oficial)';
+        }
+        
+        else if (sel_musicas.value == 'obstinado'){
+            ax_obstinado++;
+            mus_obstinado.style.display = 'block'
+            levanta.style.display = 'none';
+            um_acorde.style.display = 'none ';
+            sucesso.style.display = 'none';
+            cancao.style.display = 'none';
+            fone.style.display = 'none';
+        }
+        
+    }
+    
+    var likesn_levanta = 0 ;
+    var likesn_acord = 0 ;
+    
+    function naogostei(){
+        likesnegativos_levanta.innerHTML = likesn_levanta++;
+        likesnegativos_acorde.innerHTML = likesn_acord++;
+    }
+    
+    var likesg_levanta = 0 ;
+    var likesg_acorde = 0 ;
+
+    function gostei(){
+        likespositivos_levanta.innerHTML = likesg_levanta++;
+        likespositivos_acorde.innerHTML = likesg_acorde++;
+    }
+
+</script>
