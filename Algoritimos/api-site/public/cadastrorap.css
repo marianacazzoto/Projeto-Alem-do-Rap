@@ -88,8 +88,7 @@ button:hover{
     color: white;
     height: 550px;
     /* border: 3px solid yellow; */
-    background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
-    background-size: cover;
+    /* background-size: cover; */
   }
   
   .banner-login .container {

@@ -31,7 +31,7 @@
     border-right: 3px solid #000000;
     background-color: #000000;
     /* border: 3px solid pink; */
-    text-align: center;
+    /* text-align: center; */
   }
   
   .dash-right {
@@ -135,7 +135,7 @@ body {
 
 .dash-right .avisos .container .div-form {
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .dash-right .avisos .container .div-form #form_postagem {
@@ -370,8 +370,9 @@ body {
   width: 30px;
 } */
 
-.div-form .likes {
+.likes {
   display: flex;
+  text-align: right;
 } 
 
 .div-form .sn_likes{
