@@ -12,145 +12,154 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="./texteintera.html">
+        <!-- <link rel="stylesheet" href="./texteintera.html"> -->
 </head>
-<body onload="validarSessao(), atualizarFeed()">
+<body onload="validarSessao(), atualizarFeed()" >
+    
 
-    <div class="janela">
-        <div class="header-left">
-            
-            <img src="./assets/ALÉM_DO_RAP-removebg-preview.png" class="imagemlogo" alt="imagem logo">
-         
+    <div class="header">
+        <div class="seila">
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
-            
-
+            <ul class="navbar">
+                <li><a href="./indexrap.html"><img src="./assets/botao-home.png" alt=""></a></li>
+                <li><a href="./videos.html"><img src="./assets/play-button.png" alt=""></a></li>
+                <li><a href="#"> <img src="./assets/musica.png" alt=""> </a></li>
+            </ul>
         </div>
     </div>
 
+    <div class="banner">
+        <div class="container">
+            <h1>FALA QUE TE ESCUTO</h1> <br>
+            <select class="estilizar" id="sel_musicas" onchange="escolhida()">
+                <option value="escolher">Escolha uma Musica</option>
+                <option value="opt_universo">Universo</option>
+                <option value="levanta_e_anda">Levanta e Anda</option>
+                <option value="acorde">Um Acorde</option>
+                <option value="sucesso_na_vida">Sucesso na Vida</option>
+                <option value="cancao_infantil">Canção Infantil</option>
+            </select>
+            <br>
+            <br>
+            <img id="fone" src="./assets/musica.png" alt="imagem fone">
 
+            <div id="videos" class="video_de_musicas">
 
-    <!-- <div class="dash-right">
+                <div id="universo" style="display: none;">
+                    <iframe width="450" height="215" src="https://www.youtube.com/embed/QseGE7bK-Cw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 
-        <div class="avisos">
-            <div class="container">
-                <h1>FALA QUE TE ESCUTO</h1> 
-                <select class="estilizar" id="sel_musicas" onchange="escolhida()">
-                    <option value="escolher">Escolha uma Musica</option>
-                    <option value="algumas_frases">Algumas Frases</option>
-                    <option value="levanta_e_anda">Levanta e Anda</option>
-                    <option value="acorde">Um Acorde</option>
-                    <option value="sucesso_na_vida">Sucesso na Vida</option>
-                    <option value="cancao_infantil">Canção Infantil</option>
-                    <option value="obstinado">Obstinado</option>
-                </select>
-                <br>
-                <br>
-                <img id="fone" src="./assets/Component 10 (2).png" alt="imagem fone">
+                    <div class="borda" id="msguniverso"></div><br>
 
-                <div id="videos" class="video_de_musicas">
-                    <div id="algumas" style="display: none;">
-                       
-                    </div>
-
-                    <div id="levanta" style="display: none;">
-                        <iframe width="450" height="215" src="https://www.youtube.com/embed/GZgnl5Ocuh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
-                        <div class="borda" id="msglevanta"></div><br>
-
-                        <span class="vizu" > <b id="vizulevanta" >0</b> Vizualizações</span>
-
-                        <div class="likes">
-                            <div class="sn_likes">
-                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
-                                <span> <b id="likesnegativos_levanta">0</b> </span>
-                            </div>
-
-                            <div class="sn_likes">
-                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
-                                <span> <b id="likespositivos_levanta">0</b> </span>
-                            </div>
+                    <div class="likes">
+                        <div class="vizu" > <b id="vizuniverso" >0</b> Vizualizações</div>
+                        <div class="sn_likes">
+                            <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
+                            <span> <b id="likespositivos_levanta">0</b> </span>
                         </div>
-                    </div>
+                        <div class="sn_likes">
+                            <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
+                            <span> <b id="likesnegativos_levanta">0</b> </span>
 
-                    <div id="um_acorde" style="display: none;">
-                        <iframe width="450" height="215" src="https://www.youtube.com/embed/LizvFIA08e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
-                        <div class="borda" id="msgacorde"></div><br>
-
-                        <span class="vizu" > <b id="vizuacorde" >0</b> Vizualizações</span>
-
-                        <div class="likes">
-                            <div class="sn_likes">
-                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
-                                <span> <b id="likesnegativos_acorde">0</b> </span>
-                            </div>
-
-                            <div class="sn_likes">
-                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
-                                <span> <b id="likespositivos_acorde">0</b> </span>
-                            </div>
                         </div>
-                    </div>
-
-                    </div>
-
-                    <div id="sucesso" style="display: none;">
-                        <iframe width="450" height="215" src="https://www.youtube.com/embed/H1HqUFeTaDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
-                        <div class="borda" id="msgsucesso"></div><br>
-
-                        <span> <b id="vizusucesso" >0</b> Vizualizações</span>
-
-                        <div class="likes">
-                            <div class="sn_likes">
-                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
-                                <span> <b id="likesnegativos">0</b> </span>
-                            </div>
-
-                            <div class="sn_likes">
-                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
-                                <span> <b id="likespositivos">0</b> </span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div id="cancao" style="display: none;">
-                        <iframe width="450" height="215" src="https://www.youtube.com/embed/Ri-eF5PJ2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
-                        <div class="borda" id="msgcancao"></div><br>
-
-                        <span> <b id="vizucancao" >0</b> Vizualizações</span>
-
-                        <div class="likes">
-                            <div class="sn_likes">
-                                <img onclick="naogostei()" src="./assets/naogostei.png" alt="imagemnaogostei">
-                                <span> <b id="likesnegativos">0</b> </span>
-                            </div>
-
-                            <div class="sn_likes">
-                                <img onclick="gostei()" src="./assets/gostei.png" alt="imagemgostei">
-                                <span> <b id="likespositivos">0</b> </span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div id="mus_obstinado" style="display: none;">
-                        <iframe width="450" height="215" src="https://www.youtube.com/embed/Ri-eF5PJ2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
                 </div>
-                <br>
-                <br>
+                
+                <div id="levanta" style="display: none;">
+                    <iframe width="450" height="215" src="https://www.youtube.com/embed/GZgnl5Ocuh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                    <div class="borda" id="msglevanta"></div><br>
+                    
+                    
+                    <div class="likes">
+                        <div class="vizu" > <b id="vizulevanta" >0</b> Vizualizações</div>
+                        <div class="sn_likes">
+                            <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
+                            <span> <b id="likespositivos_levanta">0</b> </span>
+                        </div>
+                        <div class="sn_likes">
+                            <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
+                            <span> <b id="likesnegativos_levanta">0</b> </span>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div id="um_acorde" style="display: none;">
+                    <iframe width="450" height="215" src="https://www.youtube.com/embed/LizvFIA08e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                    <div class="borda" id="msgacorde"></div><br>
+
+                    
+                    <div class="likes">
+                        <div class="vizu" > <b id="vizuacorde" >0</b> Vizualizações</div>
+                        <div class="sn_likes">
+                            <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
+                            <span> <b id="likesnegativos_acorde">0</b> </span>
+                        </div>
+
+                        <div class="sn_likes">
+                            <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
+                            <span> <b id="likespositivos_acorde">0</b> </span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                </div>
+
+                <div id="sucesso" style="display: none;">
+                    <iframe width="450" height="215" src="https://www.youtube.com/embed/H1HqUFeTaDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                    <div class="borda" id="msgsucesso"></div><br>
+
+                    
+                    <div class="likes">
+                        <div> <b id="vizusucesso" >0</b> Vizualizações</div>
+                        <div class="sn_likes">
+                            <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
+                            <span> <b id="likesnegativos">0</b> </span>
+                        </div>
+
+                        <div class="sn_likes">
+                            <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
+                            <span> <b id="likespositivos">0</b> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cancao" style="display: none;">
+                    <iframe width="450" height="215" src="https://www.youtube.com/embed/Ri-eF5PJ2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                    <div class="borda" id="msgcancao"></div><br>
+
+                    
+                    <div class="likes">
+                        <div> <b id="vizucancao" >0</b> Vizualizações</div>
+                        <div class="sn_likes">
+                            <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
+                            <span> <b id="likesnegativos">0</b> </span>
+                        </div>
+
+                        <div class="sn_likes">
+                            <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
+                            <span> <b id="likespositivos">0</b> </span>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+    <div class="dash-right">
+        <div class="avisos">
+            <div class="container">
+                <h1>Faça uma Publicação</h1>
                 <div class="div-form">
                     <form id="form_postagem" method="post" onsubmit="return publicar()">
                         <label>
@@ -161,15 +170,14 @@
                         <br>
                         <br>
                         <label>
-                            Criar publicação:
+                            Descrição:
                             <br>
                             <textarea name="descricao" id="textarea_descricao" maxlength="350" rows="5"></textarea>
                         </label>
-
-                        
-
                         <br><br>
                         <button>Publicar</button>
+                    </form>
+                    
                         <br><br>
                         <div id="mensagem" class="msg"></div>
                         <br>
@@ -197,7 +205,6 @@
                         <br>
                         <br>
                         <button>Publicar</button>
-                    </form>
                 </div>
                 <h1>FEED</h1>
                 <div class="div-results">
@@ -205,39 +212,19 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        
-        <div class="dash-right">
-
-            <div class="avisos">
-                <div class="container">
-                    <h1>Publicar um aviso</h1>
-                    <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Título:
-                                <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
-                            <br>
-                            <label>
-                                Descrição (máximo de 250 caracteres):
-                                <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
-                            <br>
-                            <button>Enviar</button>
-                        </form>
-                    </div>
-                    <h1>Mural de Avisos</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
-                        </div>
-                    </div>
+        <!-- <div class="footer">
+            <div class="container2">
+                <span>Todos os direitos reservados        ©2021</span>
+                <div>
+                    <img src="./assets/instagram (1).png" alt="logo instagram">
+                    <img src="./assets/facebook (1).png" alt="logo facebook" >
+                    <img src="./assets/whatsapp (1).png" alt="logo whatsapp" >
                 </div>
             </div>
-        
+        </div>  -->
+
     </body>
 </html>
 
@@ -387,7 +374,7 @@
         return false;
     }
 
-    var ax_algumas = 0;
+    var ax_universo = 0;
     var ax_levanta = 1;
     var ax_acorde = 1;
     var ax_sucesso = 1;
@@ -402,11 +389,18 @@
             um_acorde.style.display = 'none ';
             sucesso.style.display = 'none';
             cancao.style.display = 'none';
-            mus_obstinado.style.display = 'none'
+            universo.style.display = 'none';
         }
-        else if(sel_musicas.value == 'algumas_frases'){
-            ax_algumas++;
-            algumas.style.display = 'block';
+        else if(sel_musicas.value == 'opt_universo'){
+            vizuniverso.innerHTML = ax_sucesso++;
+            universo.style.display = 'block';
+            fone.style.display = 'none';
+            levanta.style.display = 'none';
+            um_acorde.style.display = 'none ';
+            sucesso.style.display = 'none';
+            cancao.style.display = 'none';
+
+            msguniverso.innerHTML = 'BK - Universo | O Líder em Movimento';
         }
         
         else if (sel_musicas.value == 'levanta_e_anda'){
@@ -415,8 +409,8 @@
             um_acorde.style.display = 'none ';
             sucesso.style.display = 'none';
             cancao.style.display = 'none';
-            mus_obstinado.style.display = 'none';
             fone.style.display = 'none';
+            universo.style.display = 'none';
             
             msglevanta.innerHTML = 'Emicida - Levanta e anda (Feat. Rael)';
         }
@@ -427,8 +421,8 @@
             levanta.style.display = 'none';
             sucesso.style.display = 'none';
             cancao.style.display = 'none';
-            mus_obstinado.style.display = 'none';
             fone.style.display = 'none';
+            universo.style.display = 'none';
             
             msgacorde.innerHTML = 'Coruja BC1 - Um Acorde (Feat. Zudizilla)';
         }
@@ -439,8 +433,8 @@
             levanta.style.display = 'none';
             um_acorde.style.display = 'none ';
             cancao.style.display = 'none';
-            mus_obstinado.style.display = 'none';
             fone.style.display = 'none';
+            universo.style.display = 'none';
             
             msgsucesso.innerHTML = 'Choice & FBC - Sucesso Na Vida (Prod. NOBRU Black)';
         }
@@ -451,20 +445,10 @@
             levanta.style.display = 'none';
             um_acorde.style.display = 'none ';
             sucesso.style.display = 'none';
-            mus_obstinado.style.display = 'none';
             fone.style.display = 'none';
+            universo.style.display = 'none';
             
             msgcancao.innerHTML = 'Cesar MC - Canção Infantil part. Cristal (VideoClipe Oficial)';
-        }
-        
-        else if (sel_musicas.value == 'obstinado'){
-            ax_obstinado++;
-            mus_obstinado.style.display = 'block'
-            levanta.style.display = 'none';
-            um_acorde.style.display = 'none ';
-            sucesso.style.display = 'none';
-            cancao.style.display = 'none';
-            fone.style.display = 'none';
         }
         
     }

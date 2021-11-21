@@ -106,7 +106,7 @@ button:hover{
   .banner-login .card {
     background-color: #e5e5e5;
     height: 400px;
-    width: 115vh;
+    width: 80vh;
     display: flex;
     justify-content: center;
     /* align-content: space-around; */
