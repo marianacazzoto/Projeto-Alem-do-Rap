@@ -554,4 +554,35 @@ body {
   height: 300px;
 }
 
+/* .footer {
+  background-color: #b36b5d;
+  height: 20px;
+  margin: 0; */
+  /* margin-top: px; */
+  /* padding: 15px; 
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;  
+  font-family: Chivo;
+  color: #FFFFFF;
+}   */
+/* 
+.footer .container {
+  display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: max-content;
+} */
+
+/* .footer .container span{
+  padding: 0;
+  font-size: 15px;
+}
+
+.footer .container img{
+  height: 30px;
+  margin: 0 15px;
+} */
+
 
