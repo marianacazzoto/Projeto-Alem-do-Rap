@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: #000000;
   font-family: Marvel;
 }
 
@@ -288,7 +288,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid #000000;
   padding: 20px;
 }
 
@@ -301,7 +301,7 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  background-color: #b36b5d;
   border-radius: 5px;
   margin-bottom: 80px;
 }

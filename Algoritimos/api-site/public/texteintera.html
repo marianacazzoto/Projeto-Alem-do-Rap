@@ -25,7 +25,7 @@
             </div>
 
             <ul class="navbar">
-                <li><a href="./indexrap.html"><img src="./assets/botao-home.png" alt=""></a></li>
+                <li><a href="./index.html"><img src="./assets/botao-home.png" alt=""></a></li>
                 <li class="selecionado"><img src="./assets/perfil-de-usuario.png" alt=""></li>
                 <li><a href="./videos.html"><img src="./assets/play-button.png" alt=""></a></li>
                 <li><a href="./cruzadinha.html"> <img src="./assets/musica.png" alt=""> </a></li>
@@ -36,6 +36,7 @@
     <div class="banner">
         <div class="container">
             <h1>FALA QUE TE ESCUTO</h1> <br>
+
             <select class="estilizar" id="sel_musicas" onchange="escolhida()">
                 <option value="escolher">Escolha uma Musica</option>
                 <option value="opt_universo">Universo</option>
@@ -44,6 +45,7 @@
                 <option value="sucesso_na_vida">Sucesso na Vida</option>
                 <option value="cancao_infantil">Canção Infantil</option>
             </select>
+
             <br>
             <br>
             <img id="fone" src="./assets/musica.png" alt="imagem fone">
@@ -163,11 +165,11 @@
                 <h1>Faça uma Publicação</h1>
                 <div class="div-form">
                     <form id="form_postagem" method="post" onsubmit="return publicar()">
-                        <label>
+                        <!-- <label>
                             Nome da Música:
                             <br>
                             <input name="titulo" id="titulo" maxlength="100" type="text">
-                        </label>
+                        </label> -->
                         <br>
                         <br>
                         <label>
@@ -183,7 +185,7 @@
                         <div id="mensagem" class="msg"></div>
                         <br>
 
-                        <div class="mudanca">
+                        <!-- <div class="mudanca">
                             <h3>Sua Opnião Mudou? Comenta Aí!</h3>
     
                             <select class="estilizar" id="opnioes">
@@ -205,7 +207,7 @@
                         <br>
                         <br>
                         <br>
-                        <button>Publicar</button>
+                        <button>Publicar</button> -->
                 </div>
                 <h1>FEED</h1>
                 <div class="div-results">
@@ -239,7 +241,8 @@
         var idUsuario = sessionStorage.ID_USUARIO;
 
         var corpo = {
-            titulo: form_postagem.titulo.value,
+            musica: sel_musicas.value,
+            // titulo: form_postagem.titulo.value,
             descricao: form_postagem.descricao.value
         }
 
@@ -308,44 +311,44 @@
                         // criando e manipulando elementos do HTML via JavaScript
                         var divPublicacao = document.createElement("div");
                         var spanID = document.createElement("span");
-                        var spanTitulo = document.createElement("span");
+                        var spanmusica = document.createElement("span");
                         var spanNome = document.createElement("span");
                         var divDescricao = document.createElement("div");
                         var divButtons = document.createElement("div");
-                        var btnEditar = document.createElement("button");
-                        var btnDeletar = document.createElement("button");
+                        // var btnEditar = document.createElement("button");
+                        // var btnDeletar = document.createElement("button");
 
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
+                        spanmusica.innerHTML = "Título: <b>" + publicacao.musica + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                        btnEditar.innerHTML = "Editar";
-                        btnDeletar.innerHTML = "Deletar";
+                        // btnEditar.innerHTML = "Editar";
+                        // btnDeletar.innerHTML = "Deletar";
 
                         divPublicacao.className = "publicacao";
-                        spanTitulo.id = "inputNumero" + publicacao.idAviso;
+                        spanmusica.id = "inputNumero" + publicacao.idAviso;
                         spanNome.className = "publicacao-nome";
-                        spanTitulo.className = "publicacao-titulo";
+                        spanmusica.className = "publicacao-musica";
                         divDescricao.className = "publicacao-descricao";
 
-                        divButtons.className = "div-buttons"
+                        // divButtons.className = "div-buttons"
 
-                        btnEditar.className = "publicacao-btn-editar"
-                        btnEditar.id = "btnEditar" + publicacao.idAviso;
-                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
+                        // btnEditar.className = "publicacao-btn-editar"
+                        // btnEditar.id = "btnEditar" + publicacao.idAviso;
+                        // btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
 
-                        btnDeletar.className = "publicacao-btn-editar"
-                        btnDeletar.id = "btnDeletar" + publicacao.idAviso;
-                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
+                        // btnDeletar.className = "publicacao-btn-editar"
+                        // btnDeletar.id = "btnDeletar" + publicacao.idAviso;
+                        // btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
 
                         divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);
-                        divPublicacao.appendChild(spanTitulo);
+                        divPublicacao.appendChild(spanmusica);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);
-                        divButtons.appendChild(btnEditar);
-                        divButtons.appendChild(btnDeletar);
+                        // divButtons.appendChild(btnEditar);
+                        // divButtons.appendChild(btnDeletar);
                         feed.appendChild(divPublicacao);
                     }
 
