@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF_10">
+    <meta http_equiv="X_UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device_width, initial_scale=1.0">
+    <title>Cruzadinha</title>
+    <link rel="stylesheet" href="./cruzadinha.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <ul class="navbar">
+                <li><a href="./indexrap.html"><img src="./assets/botao-home.png" alt=""></a></li>
+                <li><a href="./texteintera.html"><img src="./assets/perfil-de-usuario.png" alt=""></a></li>
+                <li><a href="./videos.html"><img src="./assets/play-button.png" alt=""></a></li>
+                <li class="selecionado"><img src="./assets/musica.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>PALAVRAS CRUZADAS</h1>
+    <div class="social">
+<div class="perguntas">
+    <p>1. O item considerado o mais relevante de um hardware que existe em um computador é a (***).</p>
+    <p>2. É a responsável pela realização das operações lógicas e aritméticas. Implementa as operações lógicas (NOT, AND, OR, XOR) e aritméticas. </p>
+    <p>3. A memória dentro da cpu, utilizada para armazenar dados.
+        <br>Dica: palavra no plural
+    </p>
+    <p>4. A memória (***) é um tipo de tecnologia que permite acesso aos arquivos armazenados no computador. </p>
+    <p>5. Tipo de memória que permite apenas leitura.</p>
+    <p>6. Chip de memória de um computador que mantém os dados quando a energia é desligada </p>
+    <p>7. Chip de memória de um computador que mantém informações armazenadas sem a necessidade de uma fonte de energia</p>
+    <p>8. Também conhecida como memória auxiliar, a (*******) tem como função armazenar grandes quantidades de informações. </p>
+    <p>9. O (***) permite que dispositivos de hardware acessem a memória do sistema para leitura e escrita</p>
+    <p>10. Linha de controle em eletrotécnica digital usada para selecionar um conjunto de circuitos, também conhecida como Chip Select. 
+        <br>Dica: sigla
+    </p>
+    <p>11. Arquitetura de barramento de computador usada para transferir dados entre dispositivos.</p>
+    <p>12. Sistema dentro de um computador ou dispositivo, em um conector ou conjunto de fios que fornece transporte para dados. </p>
+    <p>13. processador da Intel lançado em 2009 com 4 núcleos, cache L3 e frequência de 2,66GHz </p>
+    <p>14. Processador da Intel lançado em 2018 com 8 núcleos, 12mb de cache e velocidade em turbo boost. </p>
+    <p>15. Nome dado a um processador que possui 4 núcleos  </p>
+    <p>16. Nome dado a um processador que possui 2 núcleos </p>
+</div>
+
+    <table border="" align="center" rules=none>
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td>
+                <span>15</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span>10</span> 
+            </td>   
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td>
+                <input id="q_quad_core" type="text">
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <span class="nove">9</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <input id="c_cs" type="text">
+            </td>
+        </tr>
+
+        <tr align="center" >
+            <td></td>
+            <td></td>
+            <td>
+                <input id="u_quad_core" type="text">
+            </td>
+            <td>
+                <span>11</span>
+            </td>
+            <td>
+                <input id="a_address_bus" type="text">
+            </td>
+            <td>
+                <input id="d1_address_bus" type="text">
+            </td>
+            <td>
+                <input id="d2_address_bus" type="text">
+            </td>
+            <td>
+                <input id="r_address_bus" type="text">
+            </td>
+            <td>
+                <input id="e_address_bus" type="text">
+            </td>
+            <td>
+                <input id="s1_address_bus" type="text"onchange="cs()">
+            </td>
+            <td>
+                <input id="s2_address_bus" type="text">
+            </td>
+            <td>
+                <div class="traco"></div>
+            </td>
+            <td>
+                <input id="b_address_bus" type="text">
+            </td>
+            <td>
+                <input id="u_address_bus" type="text">
+            </td>
+            <td>
+                <input id="s3_address_bus" type="text"onchange="addressbus()">
+            </td>
+        </tr>
+
+        <tr align="center" >
+            <td></td>
+            <td></td>
+            <td>
+                <input id="a_quad_core" type="text">
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <input id="m_dma" type="text">
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td>
+                <span>12</span>
+            </td>
+            <td>
+                <input id="d_quad_core" type="text">
+            </td><td>
+                <input id="a1_data_bus" type="text">
+            </td>
+            <td>
+                <input id="t_data_bus" type="text">
+            </td>
+            <td>
+                <input id="a2_data_bus" type="text"onchange="dma()">
+            </td>
+            <td>
+                <div class="traco"></div>
+            </td>
+            <td>
+                <input id="b_data_bus" type="text">
+            </td>
+            <td>
+                <input id="u_data_bus" type="text">
+            </td>
+            <td>
+                <input id="s_data_bus" type="text"onchange="databus()">
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td>
+                <div class="traco"></div>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td>
+                <input id="c_quad_core" type="text">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span>2</span>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td>
+                <input id="o_quad_core" type="text">
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <span>1</span>
+            </td>
+            <td>
+                <input id="c_cpu" type="text">
+            </td>
+            <td>
+                <input id="p_cpu" type="text">
+            </td>
+            <td>
+                <input id="u_cpu" type="text"onchange="cpu()">
+            </td> 
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td>
+                <span>5</span>
+            </td>
+            <td>
+                <input id="r_quad_core" type="text">
+            </td>
+            <td></td>
+            <td>
+                    <span>13</span>
+            </td>
+            <td></td>
+            <td>
+                <span>7</span>
+            </td>
+            <td>
+                <input id="f_flash" type="text">
+            </td>
+            <td>
+                <input id="l_flash" type="text">
+            </td>
+            <td>
+                <input id="a_flash" type="text">
+            </td>
+            <td>
+                <input id="s_flash" type="text">
+            </td>
+            <td>
+                <input id="h_flash" type="text"onchange="flash()">
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td>
+                <span>3</span>
+            </td>   
+            <td>
+                <input id="r1_registradores" type="text">
+            </td>
+            <td>
+                <input id="e_quad_core" type="text"onchange="quadcore()">
+            </td>
+            <td>
+                <input id="g_registradores" type="text">
+            </td>
+            <td>
+                <input id="i_registradores" type="text">
+            </td>
+            <td>
+                <input id="s1_registradores" type="text">
+            </td>
+            <td>
+                <input id="t_registradores" type="text">
+            </td>
+            <td>
+                <input id="r2_registradores" type="text">
+            </td>
+            <td>
+                <input id="a_registradores" type="text">
+            </td>
+            <td>
+                <input id="d_registradores" type="text">
+            </td>
+            <td>
+                <input id="o_registradores" type="text">
+            </td>
+            <td>
+                <input id="r3_registradores" type="text">
+            </td>
+            <td>
+                <input id="e_registradores" type="text">
+            </td>
+            <td>
+                <input id="s2_registradores" type="text"onchange="registradores()" >
+            </td>
+            <td></td>
+        </tr>
+
+        <tr align="center">
+            <td></td> 
+            <td>
+                <input id="o_rom" type="text">
+            </td> 
+            <td></td>
+            <td></td>
+            <td>
+                <input id="i5" type="text" onchange="icinco()" >
+            </td>
+            <td>
+                <span>4</span>
+            </td>
+            <td>
+                <span>14</span>
+            </td>
+            <td></td>
+            <td>
+                <span>16</span>
+            </td>
+            <td>
+                <input id="d_dual_core" type="text">
+            </td>
+            <td>
+                <input id="u_dual_core" type="text">
+            </td>
+            <td>
+                <input id="a_dual_core" type="text">
+            </td>
+            <td>
+                <input id="l_dual_core" type="text">
+            </td>
+            <td>
+                <div class="traco"></div>
+            </td>
+            <td>
+                <input id="c_dual_core" type="text">
+            </td>
+            <td>
+                <input id="o_dual_core" type="text">
+            </td>
+            <td>
+                <input id="r_dual_core" type="text">
+            </td>
+            <td>
+                <input id="e_dual_core" type="text"onchange="dual_core()">
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td>
+                <span>8</span>
+            </td> 
+            <td>
+                <input id="m_rom" type="text"onchange="rom()">
+            </td> 
+            <td>
+                <input id="e1_memoria_de_massa" type="text">
+            </td> 
+            <td>
+                <input id="m1_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="o_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="r1_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="i_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="a1_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <div class="traco"></div>
+            </td>
+            <td>
+                <input id="d_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="e2_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <div class="traco"></div>
+            </td>
+            <td>
+                <input id="m2_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="a2_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="s1_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="s2_memoria_de_massa" type="text">
+            </td>
+            <td>
+                <input id="a3_memoria_de_massa" type="text"onchange="memoriademassa()">
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td></td>
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td>
+                <input id="a_ram" type="text">
+            </td> 
+            <td>
+                <input id="i7" type="text"onchange="isete()" >
+            </td>
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td>
+                <span>6</span>
+            </td> 
+            <td>
+                <input id="e_eprom" type="text">
+            </td> 
+            <td>
+                <input id="p_eprom" type="text">
+            </td> 
+            <td>
+                <input id="r_eprom" type="text">
+            </td> 
+            <td>
+                <input id="o_eprom" type="text">
+            </td> 
+            <td>
+                <input id="m_eprom" type="text"onchange="eprom()" >
+            </td> 
+
+            <tr align="center">
+                <td></td> 
+                <td></td> 
+                <td></td> 
+                <td></td> 
+                <td></td> 
+                <td>
+                    <input id="m_ram" type="text"onchange="ram()" >
+                </td> 
+            </tr>
+    </table>     
+</div>  
+</div>
+
+</body>
+
+</html>
+
+<script>
+
+    function databus() {
+        if (d_quad_core.value != 'd' || a1_data_bus.value != 'a' || t_data_bus.value != 't' || a2_data_bus.value != 'a' || b_data_bus.value != 'b' || u_data_bus.value != 'u' || s_data_bus.value != 's') {
+            d_quad_core.style.background='#ff6961';
+            a1_data_bus.style.background='#ff6961'; 
+            t_data_bus.style.background='#ff6961';
+            a2_data_bus.style.background='#ff6961';
+            b_data_bus.style.background='#ff6961';
+            u_data_bus.style.background='#ff6961';
+            s_data_bus.style.background='#ff6961';
+
+            d_quad_core.value= '';
+            a1_data_bus.value= ''; 
+            t_data_bus.value= '';
+            a2_data_bus.value= '';
+            b_data_bus.value= '';
+            u_data_bus.value= '';
+            s_data_bus.value= '';
+           
+        }
+        else {
+            d_quad_core.style.background='#77dd77';
+            a1_data_bus.style.background='#77dd77'; 
+            t_data_bus.style.background='#77dd77';
+            a2_data_bus.style.background='#77dd77';
+            b_data_bus.style.background='#77dd77';
+            u_data_bus.style.background='#77dd77';
+            s_data_bus.style.background='#77dd77';
+        }
+    }
+
+    function dma() {
+        if (d1_address_bus.value != 'd' || m_dma.value != 'm' || a2_data_bus.value != 'a' ) {
+            d1_address_bus.style.background='#ff6961'; 
+            m_dma.style.background='#ff6961';
+            a2_data_bus.style.background='#ff6961';
+          
+            d1_address_bus.value= ''; 
+            m_dma.value= '';
+            a2_data_bus.value= '';
+        }
+        else {
+            d1_address_bus.style.background='#77dd77'; 
+            m_dma.style.background='#77dd77';
+            a2_data_bus.style.background='#77dd77';
+          
+        }
+    }
+    function quadcore() {
+        if (q_quad_core.value != 'q' || u_quad_core.value != 'u' || a_quad_core.value != 'a' || d_quad_core.value != 'd' || c_quad_core.value != 'c' || o_quad_core.value != 'o' || r_quad_core.value != 'r'|| e_quad_core.value != 'e') {
+
+            q_quad_core.style.background='#ff6961';
+            u_quad_core.style.background='#ff6961'; 
+            a_quad_core.style.background='#ff6961';
+            d_quad_core.style.background='#ff6961';
+            c_quad_core.style.background='#ff6961';
+            o_quad_core.style.background='#ff6961';
+            r_quad_core.style.background='#ff6961';
+            e_quad_core.style.background='#ff6961';
+
+
+            q_quad_core.value= ''; 
+            u_quad_core.value= '';
+            a_quad_core.value= '';
+            d_quad_core.value= '';
+            c_quad_core.value= '';
+            o_quad_core.value= '';
+            r_quad_core.value= '';
+            e_quad_core.value= '';
+
+           
+        }
+        else {q_quad_core.style.background='#77dd77';
+            u_quad_core.style.background='#77dd77'; 
+            a_quad_core.style.background='#77dd77';
+            d_quad_core.style.background='#77dd77';
+            c_quad_core.style.background='#77dd77';
+            o_quad_core.style.background='#77dd77';
+            r_quad_core.style.background='#77dd77';
+            e_quad_core.style.background='#ff6961';
+        }
+    }
+        function addressbus() {
+        if (a_address_bus.value != 'a' || d1_address_bus.value != 'd' || d2_address_bus.value != 'd' || r_address_bus.value != 'r' || e_address_bus.value != 'e' || s1_address_bus.value != 's' || s2_address_bus.value != 's' || b_address_bus.value != 'b' || u_address_bus.value != 'u' || s3_address_bus.value != 's') {
+            a_address_bus.style.background='#ff6961';
+            d1_address_bus.style.background='#ff6961'; 
+            d2_address_bus.style.background='#ff6961';
+            r_address_bus.style.background='#ff6961';
+            e_address_bus.style.background='#ff6961';
+            s1_address_bus.style.background='#ff6961';
+            s2_address_bus.style.background='#ff6961';
+            b_address_bus.style.background='#ff6961';
+            u_address_bus.style.background='#ff6961';
+            s3_address_bus.style.background='#ff6961';
+
+            a_address_bus.value= '';
+            d1_address_bus.value= ''; 
+            d2_address_bus.value= '';
+            r_address_bus.value= '';
+            e_address_bus.value= '';
+            s1_address_bus.value= '';
+            s2_address_bus.value= '';
+            b_address_bus.value= '';
+            u_address_bus.value= '';
+            s3_address_bus.value= '';
+           
+        }
+        else {
+            a_address_bus.style.background='#77dd77';
+            d1_address_bus.style.background='#77dd77'; 
+            d2_address_bus.style.background='#77dd77';
+            r_address_bus.style.background='#77dd77';
+            e_address_bus.style.background='#77dd77';
+            s1_address_bus.style.background='#77dd77';
+            s2_address_bus.style.background='#77dd77';
+            b_address_bus.style.background='#77dd77';
+            u_address_bus.style.background='#77dd77';
+            s3_address_bus.style.background='#77dd77';
+        }
+    }    
+
+    function flash() {
+        if (f_flash.value != 'f' || l_flash.value != 'l' || a_flash.value != 'a' || s_flash.value != 's' || h_flash.value != 'h') {
+            f_flash.style.background='#ff6961';
+            l_flash.style.background='#ff6961'; 
+            a_flash.style.background='#ff6961';
+            s_flash.style.background='#ff6961';
+            h_flash.style.background='#ff6961';
+            
+     
+            f_flash.value = '';
+            l_flash.value = ''; 
+            a_flash.value = '';
+            s_flash.value = '';
+            h_flash.value = '';
+           
+        }
+        else {
+            f_flash.style.background='#77dd77';
+            l_flash.style.background='#77dd77'; 
+            a_flash.style.background='#77dd77';
+            s_flash.style.background='#77dd77';
+            h_flash.style.background='#77dd77';
+        }
+    }
+
+    function registradores() {
+        if (r1_registradores.value != 'r' || e_quad_core.value != 'e' || g_registradores.value != 'g' || i_registradores.value != 'i' || s1_registradores.value != 's' || t_registradores.value != 't' || r2_registradores.value != 'r' || a_registradores.value != 'a' || d_registradores.value != 'd' || o_registradores.value != 'o' || r3_registradores.value != 'r' || e_registradores.value != 'e' || s2_registradores.value != 's' ) {
+
+            r1_registradores.style.background='#ff6961';
+            e_quad_core.style.background='#ff6961'; 
+            g_registradores.style.background='#ff6961';
+            i_registradores.style.background='#ff6961';
+            s1_registradores.style.background='#ff6961';
+            t_registradores.style.background='#ff6961';
+            r2_registradores.style.background='#ff6961';
+            a_registradores.style.background='#ff6961';
+            d_registradores.style.background='#ff6961';
+            o_registradores.style.background='#ff6961';
+            r3_registradores.style.background='#ff6961';
+            e_registradores.style.background='#ff6961';
+            s2_registradores.style.background='#ff6961';
+
+
+            r1_registradores.value= '';
+            e_registradores.value= ''; 
+            g_registradores.value= '';
+            i_registradores.value= '';
+            s1_registradores.value= '';
+            t_registradores.value= '';
+            r2_registradores.value= '';
+            a_registradores.value= '';
+            d_registradores.value= '';
+            o_registradores.value= '';
+            r3_registradores.value= '';
+            e_registradores.value= '';
+            s2_registradores.value= '';
+           
+        }
+        else {
+            r1_registradores.style.background='#77dd77';
+            e_quad_core.style.background='#77dd77'; 
+            g_registradores.style.background='#77dd77';
+            i_registradores.style.background='#77dd77';
+            s1_registradores.style.background='#77dd77';
+            t_registradores.style.background='#77dd77';
+            r2_registradores.style.background='#77dd77';
+            a_registradores.style.background='#77dd77';
+            d_registradores.style.background='#77dd77';
+            o_registradores.style.background='#77dd77';
+            r3_registradores.style.background='#77dd77';
+            e_registradores.style.background='#77dd77';
+            s2_registradores.style.background='#77dd77';
+        }
+    }    
+
+    function rom(){
+        if ( r1_registradores.value != 'r' ||o_rom.value != 'o' || m_rom.value != 'm' ) {
+            r1_registradores.style.background='#ff6961'; 
+            o_rom.style.background='#ff6961';
+            m_rom.style.background='#ff6961';
+          
+            r1_registradores.value= ''; 
+            o_rom.value= '';
+            m_rom.value= '';
+        }
+        else {
+            r1_registradores.style.background='#77dd77'; 
+            o_rom.style.background='#77dd77';
+            m_rom.style.background='#77dd77';
+          
+        }
+    }
+    function memoriademassa() {
+        if (m_rom.value != 'm' || e1_memoria_de_massa.value != 'e' || m1_memoria_de_massa.value != 'm' || o_memoria_de_massa.value != 'o' ||r1_memoria_de_massa.value != 'r' ||i_memoria_de_massa.value != 'i' || a1_memoria_de_massa.value != 'a' || d_memoria_de_massa.value != 'd' |e2_memoria_de_massa.value != 'e' || m2_memoria_de_massa.value != 'm' || a2_memoria_de_massa.value != 'a' || s1_memoria_de_massa.value != 's' || s2_memoria_de_massa.value != 's' || a3_memoria_de_massa.value != 'a') {
+
+            m_rom.style.background='#ff6961';
+            e1_memoria_de_massa.style.background='#ff6961';
+            m1_memoria_de_massa.style.background='#ff6961'; 
+            o_memoria_de_massa.style.background='#ff6961';
+            r1_memoria_de_massa.style.background='#ff6961';
+            i_memoria_de_massa.style.background='#ff6961';
+            a1_memoria_de_massa.style.background='#ff6961';
+            d_memoria_de_massa.style.background='#ff6961';
+            e2_memoria_de_massa.style.background='#ff6961';
+            m2_memoria_de_massa.style.background='#ff6961';
+            a2_memoria_de_massa.style.background='#ff6961';
+            s1_memoria_de_massa.style.background='#ff6961';
+            s2_memoria_de_massa.style.background='#ff6961';
+            a3_memoria_de_massa.style.background='#ff6961';
+
+            m_rom.value='';
+            e1_memoria_de_massa.value= '';
+            m1_memoria_de_massa.value= ''; 
+            o_memoria_de_massa.value= '';
+            r1_memoria_de_massa.value= '';
+            i_memoria_de_massa.value= '';
+            a1_memoria_de_massa.value= '';
+            d_memoria_de_massa.value= '';
+            e2_memoria_de_massa.value= '';
+            m2_memoria_de_massa.value= '';
+            a2_memoria_de_massa.value= '';
+            s1_memoria_de_massa.value= '';
+            s2_memoria_de_massa.value= '';
+            a3_memoria_de_massa.value= '';
+           
+        }
+        else {
+            m_rom.style.background='#77dd77';
+            e1_memoria_de_massa.style.background='#77dd77';
+            m1_memoria_de_massa.style.background='#77dd77'; 
+            o_memoria_de_massa.style.background='#77dd77';
+            r1_memoria_de_massa.style.background='#77dd77';
+            i_memoria_de_massa.style.background='#77dd77';
+            a1_memoria_de_massa.style.background='#77dd77';
+            d_memoria_de_massa.style.background='#77dd77';
+            e2_memoria_de_massa.style.background='#77dd77';
+            m2_memoria_de_massa.style.background='#77dd77';
+            a2_memoria_de_massa.style.background='#77dd77';
+            s1_memoria_de_massa.style.background='#77dd77';
+            s2_memoria_de_massa.style.background='#77dd77';
+            a3_memoria_de_massa.style.background='#77dd77';
+        }
+    }  
+
+    function cpu(){
+        if ( c_cpu.value != 'c' || p_cpu.value != 'p' || u_cpu.value != 'u' ) {
+            c_cpu.style.background='#ff6961'; 
+            p_cpu.style.background='#ff6961';
+            u_cpu.style.background='#ff6961';
+          
+            c_cpu.value= ''; 
+            p_cpu.value= '';
+            u_cpu.value= '';
+        }
+        else {
+            c_cpu.style.background='#77dd77'; 
+            p_cpu.style.background='#77dd77';
+            u_cpu.style.background='#77dd77';
+          
+        }
+    }
+
+    function icinco(){
+        if ( i_registradores.value != 'i' || i5.value != '5' ) {
+            i_registradores.style.background='#ff6961'; 
+            i5.style.background='#ff6961';
+          
+            i_registradores.value= ''; 
+            i5.value= '';
+        }
+        else {
+            i_registradores.style.background='#77dd77'; 
+            i5.style.background='#77dd77';
+          
+        }
+    }
+
+    function dual_core() {
+        if (d_dual_core.value != 'd' || u_dual_core.value != 'u' || a_dual_core.value != 'a' || l_dual_core.value != 'l' || c_dual_core.value != 'c' || o_dual_core.value != 'o'|| r_dual_core.value != 'r' || e_dual_core.value != 'e' ) {
+            d_dual_core.style.background='#ff6961';
+            u_dual_core.style.background='#ff6961'; 
+            a_dual_core.style.background='#ff6961';
+            l_dual_core.style.background='#ff6961';
+            c_dual_core.style.background='#ff6961';
+            o_dual_core.style.background='#ff6961';
+            r_dual_core.style.background='#ff6961';
+            e_dual_core.style.background='#ff6961';
+            
+     
+            d_dual_core.value = '';
+            u_dual_core.value = ''; 
+            a_dual_core.value = '';
+            l_dual_core.value = '';
+            c_dual_core.value = '';
+            o_dual_core.value = '';
+            r_dual_core.value = '';
+            o_dual_core.value = '';
+           
+        }
+        else {
+            d_dual_core.style.background='#77dd77';
+            u_dual_core.style.background='#77dd77'; 
+            a_dual_core.style.background='#77dd77';
+            l_dual_core.style.background='#77dd77';
+            c_dual_core.style.background='#77dd77';
+            o_dual_core.style.background='#77dd77';
+            r_dual_core.style.background='#77dd77';
+            e_dual_core.style.background='#77dd77';
+        }
+    }
+
+    function isete(){
+        if ( i_memoria_de_massa.value != 'i' || i7.value != '7' ) {
+            i_memoria_de_massa.style.background='#ff6961'; 
+            i7.style.background='#ff6961';
+          
+            i_memoria_de_massa.value= ''; 
+            i7.value= '';
+        }
+        else {
+            i_memoria_de_massa.style.background='#77dd77'; 
+            i7.style.background='#77dd77';
+          
+        }
+    }
+
+    function eprom(){
+        if ( e_eprom.value != 'e' || p_eprom.value != 'p' || r_eprom.value != 'r' || o_eprom.value != 'o' || m_eprom.value != 'm' ) {
+            e_eprom.style.background='#ff6961';
+            p_eprom.style.background='#ff6961';
+            r_eprom.style.background='#ff6961';
+            o_eprom.style.background='#ff6961';
+            m_eprom.style.background='#ff6961';
+          
+            e_eprom.value='';
+            p_eprom.value='';
+            r_eprom.value='';
+            o_eprom.value='';
+            m_eprom.value= ''; 
+        }
+        else {
+            e_eprom.style.background='#77dd77';
+            p_eprom.style.background='#77dd77';
+            r_eprom.style.background='#77dd77';
+            o_eprom.style.background='#77dd77';
+            m_eprom.style.background='#77dd77';
+        }
+    }
+    function ram(){
+        if ( r1_memoria_de_massa.value != 'r' || a_ram.value != 'a' || m_ram.value != 'm' ) {
+            r1_memoria_de_massa.style.background='#ff6961';
+            a_ram.style.background='#ff6961';
+            m_ram.style.background='#ff6961';
+          
+            r1_memoria_de_massa.value= '';
+            a_ram.value= '';
+            m_ram.value= '';
+        }
+        else {
+            r1_memoria_de_massa.style.background='#77dd77';
+            a_ram.style.background='#77dd77';
+            m_ram.style.background='#77dd77';
+        }
+    }
+    function cs() {
+        if ( c_cs.value != 'c' || s1_address_bus.value != 's' ) { 
+            c_cs.style.background='#ff6961';
+            s1_address_bus.style.background='#ff6961';
+          
+            c_cs.value= '';
+            s1_address_bus.value= '';
+        }
+        else {
+            c_cs.style.background='#77dd77';
+            s1_address_bus.style.background='#77dd77';
+        } 
+    }
+</script>
