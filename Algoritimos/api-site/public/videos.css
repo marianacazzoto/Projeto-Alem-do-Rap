@@ -193,11 +193,13 @@ body {
   font-weight: bold;
   font-size: 25px;
   color: #000000;
+  margin: 0;
+  padding: 0;
 }
 
 .emalta{
   height: 50vh;
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 .footer{
@@ -234,4 +236,9 @@ body {
 #racionais{
   position: relative;
   top: 45px;
+}
+
+iframe{
+  /* margin-bottom: 10px; */
+  padding: 5px;
 }

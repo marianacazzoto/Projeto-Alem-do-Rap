@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./videos.css">
 </head>
-<body>
+<body onload="nome()" >
 
     <div class="header">
         <div class="container">
@@ -102,6 +102,11 @@
 </body>
 </html>
 <script>
+
+    function nome(){
+        var nome_usuario = sessionStorage.getItem("NOME_USUARIO");
+        b_usuario.innerHTML = nome_usuario;
+    }
 
     function pesquisar(){
         var pesqui_musica = ['racionais','coruja bc1','emicida','djonga']
