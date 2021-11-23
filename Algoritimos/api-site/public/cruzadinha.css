@@ -5,7 +5,7 @@ body {
     margin: 0;
     background-color: #FFFFFF;
     font-family: Marvel;
-    background-color: #000000;
+    /* background-color: #0; */
   }
 
 .container{
@@ -112,18 +112,21 @@ body {
 
 .social {
     display: flex;
-
 }
 
 .perguntas {
     width: 500px;
     background-color: #b36b5d;
     border-radius: 15px;
+    margin: 20px;
+    height: 400px;
+    align-self: center;
+    margin-left: 40px; 
 }
 
 table {
     border: none;
-    background-color: #000000;
+    /* background-color: #000000; */
     width: 500px;
     height: 500px;
 }
@@ -151,6 +154,8 @@ input {
 h1 {
     padding-left: 70px; 
     color: #b36b5d;
+    position: relative;
+    top: 50px;
 }
 
 p {
