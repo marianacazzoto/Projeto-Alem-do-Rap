@@ -195,12 +195,10 @@ body {
   color: #000000;
   margin: 0;
   padding: 0;
+  position: relative;
+  bottom: 50px;
 }
 
-.emalta{
-  height: 50vh;
-  /* margin-top: auto; */
-}
 
 .footer{
   background-color: #b36b5d;
@@ -233,12 +231,27 @@ body {
   margin: 0 15px;
 }
 
+#emalta{
+  position: relative;
+  top: 45px;
+}
+
 #racionais{
   position: relative;
   top: 45px;
 }
 
-iframe{
-  /* margin-bottom: 10px; */
-  padding: 5px;
+#emicida{
+  position: relative;
+  top: 45px;
+}
+
+#coruja{
+  position: relative;
+  top: 45px;
+}
+
+#djonga{
+  position: relative;
+  top: 45px;
 }
