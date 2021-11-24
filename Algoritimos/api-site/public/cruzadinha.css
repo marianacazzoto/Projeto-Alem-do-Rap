@@ -3,9 +3,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: #000000;
     font-family: Marvel;
-    /* background-color: #0; */
   }
 
 .container{
@@ -119,7 +118,7 @@ body {
     background-color: #b36b5d;
     border-radius: 15px;
     margin: 20px;
-    height: 400px;
+    height: 450px;
     align-self: center;
     margin-left: 40px; 
 }
@@ -153,9 +152,7 @@ input {
 
 h1 {
     padding-left: 70px; 
-    color: #b36b5d;
-    position: relative;
-    top: 50px;
+    color: #000000;
 }
 
 p {
