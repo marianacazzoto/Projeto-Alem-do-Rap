@@ -39,11 +39,11 @@
 
             <select class="estilizar" id="sel_musicas" onchange="escolhida()">
                 <option value="escolher">Escolha uma Musica</option>
-                <option value="opt_universo">Universo</option>
-                <option value="levanta_e_anda">Levanta e Anda</option>
-                <option value="acorde">Um Acorde</option>
-                <option value="sucesso_na_vida">Sucesso na Vida</option>
-                <option value="cancao_infantil">Canção Infantil</option>
+                <option value="1">Universo</option>
+                <option value="2">Levanta e Anda</option>
+                <option value="3">Um Acorde</option>
+                <option value="4">Sucesso na Vida</option>
+                <option value="5">Canção Infantil</option>
             </select>
 
             <br>
@@ -185,15 +185,15 @@
                         <div id="mensagem" class="msg"></div>
                         <br>
 
-                        <div class="mudanca">
+                        <!-- <div class="mudanca">
                             <h3>Sua Opnião Mudou? Comenta Aí!</h3>
     
                             <select class="estilizar" id="opnioes">
                                 <option value="">Selecione uma Opção</option>
-                                <option value="">Sim</option>
-                                <option value="">Não</option>
-                                <option value="">Talvez</option>
-                                <option value="">Um Pouco</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                                <option value="talvez">Talvez</option>
+                                <option value="um pouco">Um Pouco</option>
                             </select>
                         </div>
 
@@ -207,7 +207,7 @@
                         <br>
                         <br>
                         <br>
-                        <button>Publicar</button>
+                        <button>Publicar</button> -->
                 </div>
                 <h1>FEED</h1>
                 <div class="div-results">
@@ -319,7 +319,7 @@
                         // var btnDeletar = document.createElement("button");
 
 
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        spanID.innerHTML = "ID: <b>" + publicacao.idcomentario + "</b>";
                         spanmusica.innerHTML = "Título: <b>" + publicacao.musica + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
@@ -327,7 +327,7 @@
                         // btnDeletar.innerHTML = "Deletar";
 
                         divPublicacao.className = "publicacao";
-                        spanmusica.id = "inputNumero" + publicacao.idAviso;
+                        spanmusica.id = "inputNumero" + publicacao.idcomentario;
                         spanNome.className = "publicacao-nome";
                         spanmusica.className = "publicacao-musica";
                         divDescricao.className = "publicacao-descricao";

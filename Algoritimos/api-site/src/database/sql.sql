@@ -40,20 +40,37 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
-select * from usuario;
+create table musicas (
+id INT PRIMARY KEY auto_increment,
+nome varchar (50)
+);
 
-CREATE TABLE aviso (
+insert into musicas (nome)
+values ('universo'),
+       ('levanta e anda'),
+       ('um acorde'),
+       ('sucesso na vida'),
+       ('cancao infantil');
+       
+CREATE TABLE comentarios (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
     descricao VARCHAR(150),
 	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id),
+    fk_musica INT,
+	FOREIGN KEY (fk_musica) REFERENCES musicas(id)
 ); 
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
+CREATE TABLE avaliacoes(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+	descricao VARCHAR(150),
+	classificacao varchar(10),
+    fk_musica INT,
+	FOREIGN KEY (fk_musica) REFERENCES musicas(id)
 );
+
+select * from usuario;
+select * from musicas;
+select * from comentarios;
+select * from avaliacoes;
