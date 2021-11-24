@@ -54,12 +54,11 @@ values ('universo'),
        
 CREATE TABLE comentarios (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
+	fk_musica INT,
+	FOREIGN KEY (fk_musica) REFERENCES musicas(id),
     descricao VARCHAR(150),
 	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id),
-    fk_musica INT,
-	FOREIGN KEY (fk_musica) REFERENCES musicas(id)
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 ); 
 
 CREATE TABLE avaliacoes(
@@ -74,3 +73,18 @@ select * from usuario;
 select * from musicas;
 select * from comentarios;
 select * from avaliacoes;
+
+SELECT 
+            co.id AS idcomentario,
+            mu.nome,
+            co.descricao,
+            co.fk_usuario,
+            u.id AS idUsuario,
+            u.nome,
+            u.email,
+            u.senha
+        FROM comentarios co
+            INNER JOIN usuario u
+                ON co.fk_usuario = u.id
+                INNER JOIN musicas mu 
+                ON co.fk_musica = mu.id;
