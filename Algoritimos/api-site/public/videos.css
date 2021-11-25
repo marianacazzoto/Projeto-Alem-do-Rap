@@ -189,14 +189,14 @@ body {
   border-top: 2px solid #b36b5d;
 }
 
-.pesquisadas h1{
+.text h1{
   font-weight: bold;
   font-size: 25px;
   color: #000000;
   margin: 0;
   padding: 0;
   position: relative;
-  bottom: 50px;
+  bottom: 60px;
 }
 
 
@@ -233,7 +233,7 @@ body {
 
 #emalta{
   position: relative;
-  top: 45px;
+  top: 18px;
 }
 
 #racionais{

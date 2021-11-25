@@ -39,7 +39,9 @@
                     <!-- <img src="./assets/lupa.png" alt="imagem de lupa"> -->
                     <div class="pesquisadas">
                         <div id="emalta" style="display: block;">
-                            <!-- <h1>EM ALTA</h1> -->
+                            <div class="text">
+                                <h1>EM ALTA</h1>
+                            </div>
                             <iframe width="300" height="215" src="https://www.youtube.com/embed/h1IEZ4XR_NY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <iframe width="300" height="215" src="https://www.youtube.com/embed/GZgnl5Ocuh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <iframe width="300" height="215" src="https://www.youtube.com/embed/kvIR8iQh47k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -86,7 +88,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>>
 
     <div class="footer">
         <div class="container">
@@ -109,20 +111,19 @@
     }
 
     function pesquisar(){
-        var pesqui_musica = ['racionais','coruja bc1','emicida','djonga']
+        var pesqui_musica = ['racionais','coruja bc1','emicida','djonga'];
         
         if(pesqui_musica.indexOf(text.value) == -1){
-            alert('nao existe essa musica ainda ');
+            alert('OPS! AINDA NÃO TEMOS ESSA NA NOSSA PLAYLIST');
             emalta.style.display = 'block';
             racionais.style.display = 'none';
-                coruja.style.display = 'none';
-                emicida.style.display = 'none';
-                djonga.style.display = 'none';
+            coruja.style.display = 'none';
+            emicida.style.display = 'none';
+            djonga.style.display = 'none';
         }
         
         else {
-            alert('coloque o fone e sinta')
-
+            alert('TRANSFORME SEU OUVIDO UMA NOVA VERSÃO VEM AÍ')
             
             if(text.value == 'racionais'){
                 racionais.style.display = 'block';
@@ -157,4 +158,5 @@
             }
         }
     }
+
 </script>
