@@ -104,7 +104,12 @@ function publicar(req, res) {
 function grafico(req,res){
  avisoModel.grafico()
  .then(function (resposta){
-     res.status(200).json(resposta)
+  if (resposta.length > 0) {
+    console.log(resposta)
+    res.status(200).json(resposta);
+  } else {
+    res.status(204).send('Nenhum resultado encontrado!');
+  }
  }
  )
  .catch(function(erro){

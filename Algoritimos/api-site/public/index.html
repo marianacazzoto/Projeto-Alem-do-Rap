@@ -182,6 +182,8 @@
 </html>
 
  <script>
+
+   buscargrafico()
 //     var slideIndex = 0;
 // showSlides();
 
@@ -305,10 +307,36 @@ function initComparisons() {
 
 initComparisons();
 
-var dados = { labels: ['Universo', 'Levanta e Anda', 'Um Acorde ','Sucesse na Vida','Canção INfantil'],
+  function buscargrafico(){
+
+    var labels = [];
+    var dados = [];
+
+    fetch(`/avisos/grafico/`)
+    .then(function (resposta) {
+if (resposta.ok == true){
+  resposta.json().then(function (resposta){
+    for(i = 0; i < resposta.length; i++){
+    labels.push(resposta[i].musica)
+    dados.push(resposta[i].cont)
+  }
+  iniciagrafico(labels,dados)
+  console.log(labels)
+  console.log(dados)
+  })
+}
+    })
+  }
+
+function iniciagrafico(label,dados){
+  var ctx = document.getElementById('myChart3').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: label,
           datasets: [{
               label: '# of Votes',
-              data: [20, 60, 44,50,40],
+              data: dados,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -326,39 +354,17 @@ var dados = { labels: ['Universo', 'Levanta e Anda', 'Um Acorde ','Sucesse na Vi
                   'rgba(255, 159, 64, 1)'
               ],
               borderWidth: 1 
-          }]}
-
-          fetch ('/aviso/grafico',
-          {method : 'GET'})
-          .then(function(resposta){
-            if(resposta.ok == true){
-              resposta.json().then(function(json){
-                json.forEach(data =>{
-                  console.log('data',data)
-                  dados.datasests[0].data.push(data.cont)
-                });
-                rendGraph()
-              })
-            }
-          })
-
-          function rendGraph (){
-
-            var ctx = document.getElementById('myChart3').getContext('2d');
-              var myChart3 = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                     
-                  },
-                  options: {
-                    maintainAspectRatio: false,
-                      scales: {
-                          y: {
-                              beginAtZero: true
-                          }
-                      }
-                  }
-              });
+          }]
+      },
+      options: {
+        maintainAspectRatio: false,
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
           }
+      }
+  });
+}
 
 </script> 
