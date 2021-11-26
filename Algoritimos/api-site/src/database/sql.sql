@@ -88,3 +88,15 @@ SELECT
                 ON co.fk_usuario = u.id
                 INNER JOIN musicas mu 
                 ON co.fk_musica = mu.id;
+                
+create table quantidade(
+fk_musica int,
+primary key (fk_musica),
+foreign key (fk_musica) references musicas (id),
+contador int
+);
+
+insert into quantidade (fk_musica,contador)
+values (1,0),(2,0),(3,0),(4,0),(5,0);            
+
+select * from quantidade;
