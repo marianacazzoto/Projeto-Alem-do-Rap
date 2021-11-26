@@ -135,11 +135,11 @@ function atualizar(contador , idMusica) {
     return database.executar(instrucao);
 }
 
-function dados() {
+function grafico() {
 
     var instrucao = `
 
-    select fk_musica as musica,contador from quantidade;
+    select fk_musica as musica,contador as cont from quantidade;
 
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -155,5 +155,5 @@ module.exports = {
   deletar,
   buscar,
   atualizar,
-  dados
+  grafico
 };

@@ -31,8 +31,8 @@ router.put("/avisos/editar/:idAviso", function (req, res) {
     avisoController.editar(req, res);
 });
 
-router.get("/dados/", function (req, res) {
-    avisoController.dados(req, res);
+router.get("/grafico/", function (req, res) {
+    avisoController.grafico(req, res);
 });
 
 module.exports = router;

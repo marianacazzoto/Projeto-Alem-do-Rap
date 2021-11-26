@@ -101,8 +101,8 @@ function publicar(req, res) {
   }
 }
 
-function dados(req,res){
- avisoModel.dados()
+function grafico(req,res){
+ avisoModel.grafico()
  .then(function (resposta){
      res.status(200).json(resposta)
  }
@@ -118,5 +118,5 @@ module.exports = {
   listarPorUsuario,
   pesquisarDescricao,
   publicar,
-  dados
+  grafico
 };
