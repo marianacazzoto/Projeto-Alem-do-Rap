@@ -17,7 +17,7 @@ body {
 }
 
 .header{
-    color: #FFFFFF;
+    color: #b36b5d;
     /* height: 5vh; */
     box-shadow: 13px -5px 10px;
     position: sticky;
@@ -35,7 +35,8 @@ body {
 
 .selecionado {
     font-weight: bold;
-    color: #FFFFFF;
+    color: #b36b5d;
+    font-size: 15px;
 }
 
 .container h1{
@@ -48,24 +49,25 @@ body {
 
 
 .imagemlogo {
-    height: 35vh;
-    margin-right: 5%;
-    padding: 15px;
+    height: 39vh;
+    position: relative;
+    bottom: 9px;
 }
 
 button {
     background-color: #FFFFFF;
-    color: #000000;
+    color: #b36b5d;
     height: 35px;
-    width: 100px;
+    width: 110px;
     border-radius: 20px;
-    font-family: Chivo;
-    border: 1px solid #451345 ;
+    font-size: 13px;
+    border: 2px solid #b36b5d ;
+    cursor: pointer;
     
 }
 
 button:hover{
-    background-color: #451345;
+    background-color: #b36b5d;
     color: #FFFFFF;
 }
 
@@ -81,7 +83,8 @@ button:hover{
 .header a {
     text-decoration: none;
     background-color: #000000;
-    color: #FFFFFF;
+    color: #b36b5d;
+    font-size: 15px;
 }
 
 .banner{
@@ -100,10 +103,6 @@ button:hover{
   
  .banner img {
     text-align: center;
-    /* margin: 20px auto;  */
-    /* font-weight: 500; */
-    /* font-size: 40px;
-    font-family: Chivo;  */
     height: 300px;
     position: relative;
     top: 60px;
@@ -126,7 +125,7 @@ button:hover{
 }
 
 .social p {
-    font-size: 20px;
+    font-size: 25px;
     margin: 20px auto;
     font-family: Chivo;
     text-align: center;
@@ -152,26 +151,6 @@ button:hover{
     height: 80vh;
   }
   
-  /* .social .box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 33%;
-}
-  
-  .social .box img {
-    width: 150px;
-    margin: 20px;
-    align-self: center;
-  }
-  
-  .social .box h4 {
-    color: #b36b5d;
-    margin-top: 30px ;
-    font-family: Chivo;
-}  */
 .acesso .container h1 {
   color: #757575;
 }
@@ -238,21 +217,6 @@ button:hover{
     margin: 0 15px;
  }
  
- .quemsomos{
-     display: flex;
-     flex-direction: column;
- }
-
- .texto{
-    width: 50vw;
-    height: 20vh;
-    padding-bottom: 200px;
-}
-
-/* .titulo{
-     padding-top: 200px ;
-     
- } */
 
  /* * {box-sizing:border-box} */
 

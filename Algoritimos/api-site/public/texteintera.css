@@ -3,6 +3,8 @@ body {
   margin: 0;
   background-color: #FFFFFF;
   font-family: Marvel;
+  display: flex;
+  flex-direction: column;
 }
 
 .seila{
@@ -14,7 +16,7 @@ body {
 }
 
 .header{
-  color: #FFFFFF;
+  color: #000000;
   /* height: 5vh; */
   box-shadow: 13px -5px 10px;
   position: sticky;
@@ -34,10 +36,6 @@ body {
   height: 50px;
 }
 
-.selecionado {
-  font-weight: bold;
-  color: #FFFFFF;
-}
 
 .seila h1{
   /* font-weight: lighter; */
@@ -84,6 +82,8 @@ button:hover{
   background-color: #000000;
   color: #FFFFFF;
 }
+
+
 /* .imagemlogo {
     height: 35vh; */
     /* margin-right: 5%; */
@@ -100,7 +100,7 @@ button:hover{
   
   .header-left a {
     text-decoration: none;
-    color: white;
+    color: #000000;
   }
   
   .header-left {
@@ -133,9 +133,6 @@ button:hover{
     align-items: center; */
   }
   
-  .header-left h1 {
-    color: #000000;
-  }
   
   .hello {
     width: 100%;
@@ -267,6 +264,11 @@ body {
   background-color: #000000;
   width: 120px;
 } 
+
+.dash-right .avisos .div-form button:hover{
+  background-color: #b36b5d;
+  color: #FFFFFF;
+}
 
 .publicacao-btn-editar {
   cursor: pointer;
@@ -450,9 +452,8 @@ body {
   margin: 5px;
 }
 
-.estilizar{
-  width: 200px;
-  height: 30px;
+#sel_musicas {
+
   text-align: center;
   border-radius: 20px;
   background-color: #000000;
@@ -495,6 +496,7 @@ body {
 .borda{
   border-bottom: 4px solid #b36b5d;
   padding: 10px;
+  color: #000000;
 }
 
 /* .span #levanta span{
@@ -584,5 +586,4 @@ body {
   height: 30px;
   margin: 0 15px;
 } */
-
 

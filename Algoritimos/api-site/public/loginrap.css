@@ -17,7 +17,7 @@ body {
 }
 
 .header{
-    color: #FFFFFF;
+    color: #b36b5d;
     /* height: 5vh; */
     box-shadow: 13px -5px 10px;
     position: sticky;
@@ -35,7 +35,7 @@ body {
 
 .selecionado {
     font-weight: bold;
-    color: #FFFFFF;
+    color: #b36b5d;
 }
 
 .container h1{
@@ -48,24 +48,24 @@ body {
 
 
 .imagemlogo {
-    height: 35vh;
-    margin-right: 5%;
-    padding: 15px;
+  height: 39vh;
+  position: relative;
+  bottom: 9px;
 }
 
 button {
     background-color: #FFFFFF;
-    color: #000000;
+    color: #b36b5d;
     height: 35px;
-    width: 100px;
+    width: 110px;
     border-radius: 20px;
     font-family: Chivo;
-    border: 1px solid #451345 ;
+    border: 2px solid #b36b5d ;
     
 }
 
 button:hover{
-    background-color: #451345;
+    background-color: #b36b5d;
     color: #FFFFFF;
 }
 
@@ -81,7 +81,7 @@ button:hover{
 .header a {
     text-decoration: none;
     background-color: #000000;
-    color: #FFFFFF;
+    color: #b36b5d;
 }
 
 .banner-login {
@@ -107,7 +107,7 @@ button:hover{
   .banner-login .card {
     background-color: #e5e5e5;
     height: 400px;
-    width: 90vh;
+    width: 75vh;
     display: flex;
     justify-content: center;
     /* align-content: space-around; */
@@ -154,6 +154,11 @@ input {
     background-color: #b36b5d;
     width: 120px;
     align-self: center;
+}
+
+.btn:hover{
+  background-color: #000000;
+  color: #FFFFFF;
 }
   
   form {

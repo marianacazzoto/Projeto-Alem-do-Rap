@@ -17,7 +17,7 @@ body {
 }
 
 .header{
-    color: #FFFFFF;
+    color: #b36b5d;
     /* height: 5vh; */
     box-shadow: 13px -5px 10px;
     position: sticky;
@@ -35,7 +35,8 @@ body {
 
 .selecionado {
     font-weight: bold;
-    color: #FFFFFF;
+    color: #b36b5d;
+    font-size: 15px;
 }
 
 .container h1{
@@ -48,25 +49,18 @@ body {
 
 
 .imagemlogo {
-    height: 35vh;
-    margin-right: 5%;
-    padding: 15px;
+  height: 39vh;
+  position: relative;
+  bottom: 9px;
 }
 
 button {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #b36b5d;
+    color: #FFFFFF;
     height: 35px;
     width: 100px;
     border-radius: 20px;
     font-family: Chivo;
-    border: 1px solid #451345 ;
-    
-}
-
-button:hover{
-    background-color: #451345;
-    color: #FFFFFF;
 }
 
 .navbar{
@@ -81,7 +75,8 @@ button:hover{
 .header a {
     text-decoration: none;
     background-color: #000000;
-    color: #FFFFFF;
+    font-size: 15px;
+    color: #b36b5d;
 }
 
 .banner-login {
@@ -105,20 +100,18 @@ button:hover{
   
   .banner-login .card {
     background-color: #e5e5e5;
-    height: 400px;
-    width: 80vh;
+    height: 65vh;
+    width: 70vh;
     display: flex;
     justify-content: center;
-    /* align-content: space-around; */
     align-items: center;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     border-radius: 30px;
   }
 
   .banner-login h1{
       position: relative;
-      bottom: 60px;
+      bottom: 40px;
       font-family: Marvel;
       color: #000000;
   }
@@ -131,10 +124,6 @@ button:hover{
   .banner-login #div_erros_login {
     margin-top: 15px;
   }
-  
-  button {
-    cursor: pointer;
-}
 
 input {
     height: 30px;
@@ -155,13 +144,16 @@ input {
     width: 120px;
     align-self: center;
 }
+
+.btn:hover{
+  background-color: #000000;
+  color: #FFFFFF;
+}
   
   form {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
+    position: relative;
+    bottom: 20px;
     text-align: center;
-    /* margin: 50px ; */
   }
   
   .loading-div {
