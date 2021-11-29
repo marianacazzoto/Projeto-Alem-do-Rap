@@ -139,8 +139,7 @@ function grafico() {
 
     var instrucao = `
 
-    select fk_musica as musica,contador as cont from quantidade;
-
+    select musicas.nome as 'musica',contador as 'cont' from quantidade join musicas on fk_musica = musicas.id;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

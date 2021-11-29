@@ -46,11 +46,12 @@ nome varchar (50)
 );
 
 insert into musicas (nome)
-values ('universo'),
-       ('levanta e anda'),
-       ('um acorde'),
-       ('sucesso na vida'),
-       ('cancao infantil');
+values ('Universo'),
+       ('Levanta e Anda'),
+       ('Um Acorde'),
+       ('Sucesso na Vida'),
+       ('Cancao Infantil'),
+       ('A Vida é Desafio');
        
 CREATE TABLE comentarios (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -61,18 +62,9 @@ CREATE TABLE comentarios (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 ); 
 
-CREATE TABLE avaliacoes(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(150),
-	classificacao varchar(10),
-    fk_musica INT,
-	FOREIGN KEY (fk_musica) REFERENCES musicas(id)
-);
-
 select * from usuario;
 select * from musicas;
 select * from comentarios;
-select * from avaliacoes;
 
 SELECT 
             co.id AS idcomentario,
@@ -97,6 +89,8 @@ contador int
 );
 
 insert into quantidade (fk_musica,contador)
-values (1,0),(2,0),(3,0),(4,0),(5,0);            
+values (1,10),(2,15),(3,20),(4,25),(5,30),(6,35);            
 
 select * from quantidade;
+
+select musicas.nome as 'musica',contador as 'cont' from quantidade join musicas on fk_musica = musicas.id;

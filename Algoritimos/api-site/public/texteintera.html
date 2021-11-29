@@ -37,7 +37,7 @@
         <div class="container">
             <h1>FALA QUE TE ESCUTO</h1> <br>
 
-            <select class="estilizar" id="sel_musicas" onchange="escolhida()">
+            <select class="estilizar" id="sel_musicas" onchange="escolhida()" style="height: 40px;">
                 <option value="escolher">Escolha uma Musica</option>
                 <option value="1">Universo</option>
                 <option value="2">Levanta e Anda</option>
@@ -159,39 +159,42 @@
                 </div>
 
                     <div id="desafio" style="display: none;">
-                        <iframe width="450" height="215" src="https://www.youtube.com/embed/gUnpHJgLyRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                        <div id="video">
+                            <iframe width="450" height="215" src="https://www.youtube.com/embed/gUnpHJgLyRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
                         
-                        <div class="borda" id="msgdesafio"></div><br>
-                        
-                        <div class="likes">
-                            <div> <b id="vizudesafio" >0</b> Vizualizações</div>
-                            <div class="sn_likes">
-                                <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
-                                <span> <b id="likesnegativos">0</b> </span>
-                            </div>
-                            
-                            <div class="sn_likes">
-                                <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
-                                <span> <b id="likespositivos">0</b> </span>
+                            <div class="borda" id="msgdesafio"></div><br>
+                            <div class="likes">
+                                <div> <b id="vizudesafio" >0</b> Vizualizações</div>
+                                <div class="sn_likes">
+                                    <img onclick="gostei()" src="./assets/gostei preto.png" alt="imagemgostei">
+                                    <span> <b id="likesnegativos">0</b> </span>
+                                </div>
+                                
+                                <div class="sn_likes">
+                                    <img onclick="naogostei()" src="./assets/nao gostei preto.png" alt="imagemnaogostei">
+                                    <span> <b id="likespositivos">0</b> </span>
+                                </div>
                             </div>
                         </div>
+                        
+                        
 
-                <!-- <div class="contextos" >“A vida é um desafio” da banda Racionais MC´s, pertencente ao álbum 1000 Trutas 1000 Tretas:  (1) “(...) Quando pivete, meu sonho era ser jogador de futebol, vai vendo... Mas o sistema limita nossa vida de tal forma Que tive que fazer minha escolha, sonhar ou sobreviver”. Neste trecho da canção “A vida é um desafio”, o narrador se declara preso às condições impostas pela realidade em que vive. Na infância seu sonho era ser jogador de futebol, porém o “sistema” limitou a vida e o sonho, então ele optou por fazer uma escolha. Nesse fragmento, qual a significação expressa pela palavra “sistema”? Ao longo da canção, o sentido da palavra sistema surge:
+                <div class="contextos" >“A vida é um desafio” da banda Racionais MC´s, pertencente ao álbum 1000 Trutas 1000 Tretas:  (1) “(...) Quando pivete, meu sonho era ser jogador de futebol, vai vendo... Mas o sistema limita nossa vida de tal forma Que tive que fazer minha escolha, sonhar ou sobreviver”. Neste trecho da canção “A vida é um desafio”, o narrador se declara preso às condições impostas pela realidade em que vive. Na infância seu sonho era ser jogador de futebol, porém o “sistema” limitou a vida e o sonho, então ele optou por fazer uma escolha. Nesse fragmento, qual a significação expressa pela palavra “sistema”? Ao longo da canção, o sentido da palavra sistema surge:
                             
                 (2) “(...) Porém, o capitalismo me obrigou a ser bem sucedido Acredito que o sonho de todo pobre é ser rico Em busca do meu sonho de consumo Procurei dar uma solução rápida e fácil pros meus problemas: O crime (...)” 
                 O sentido expresso pela palavra “sistema” surge de modo explícito através de outro termo, o “capitalismo”; e a escolha feita pelo narrador é indicada pelo uso da expressão “solução rápida”, o crime. Além do que há no fragmento, é possível inferirmos que a palavra sistema também pode ter sentidos implícitos, como: sistema do crime, sistema de tráfico de drogas, dentre outros tantos.
-                </div> -->
+                </div>
 
                         </div>
                 </div>
             </div>
         </div>
                         
-                
-                <div class="dash-right">
-        <div class="avisos">
-            <div class="container">
-                <h1>Faça uma Publicação</h1>
+        
+        <div class="dash-right">
+            <div class="avisos">
+                <div class="container">
+                <h1>FAÇA UM COMENTÁRIO</h1>
                 <div class="div-form">
                     <form id="form_postagem" method="post" onsubmit="return publicar()">
                         <!-- <label>
@@ -210,35 +213,11 @@
                         <button>Publicar</button>
                     </form>
                     
-                        <br><br>
-                        <div id="mensagem" class="msg"></div>
-                        <br>
-
-                        <!-- <div class="mudanca">
-                            <h3>Sua Opnião Mudou? Comenta Aí!</h3>
-    
-                            <select class="estilizar" id="opnioes">
-                                <option value="">Selecione uma Opção</option>
-                                <option value="sim">Sim</option>
-                                <option value="nao">Não</option>
-                                <option value="talvez">Talvez</option>
-                                <option value="um pouco">Um Pouco</option>
-                            </select>
-                        </div>
-
-                        <br>
-                        <br>
-                        <label>
-                            Criar publicação:
-                            <br>
-                            <textarea name="descricao" id="textarea_descricao" maxlength="350" rows="5"></textarea>
-                        </label>   
-                        <br>
-                        <br>
-                        <br>
-                        <button>Publicar</button> -->
+                        
+                        <!-- <div id="mensagem" class="msg"></div> -->
+                <div class="feed">
+                    <h2>FEED</h2>
                 </div>
-                <h1>FEED</h1>
                 <div class="div-results">
                     <div id="feed_container" class="feed-container">
                     </div>

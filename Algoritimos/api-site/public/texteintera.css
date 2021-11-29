@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Chivo:wght@300;400;700;900&display=swap');
+
+
 body {
   padding: 0;
   margin: 0;
   background-color: #FFFFFF;
-  font-family: Marvel;
+  font-family: Archivo;
   display: flex;
   flex-direction: column;
 }
 
 .seila{
-  /* width: 80vw; */
   height: 10vh;
   margin: 0 auto;
   align-items: center;
@@ -36,6 +38,12 @@ body {
   height: 50px;
 }
 
+.contextos {
+  display: block;
+  height: max-content;
+  margin-top: 30px;
+  width: 682px;
+}
 
 .seila h1{
   /* font-weight: lighter; */
@@ -45,6 +53,10 @@ body {
   font-size: 40px;
 }
 
+#desafio {
+  flex-direction: column;
+  align-items: center;
+}
 
 .imagemlogo {
   height: 35vh;
@@ -58,7 +70,7 @@ button {
   height: 35px;
   width: 100px;
   border-radius: 20px;
-  font-family: Chivo;
+  font-family: Archivo;
   border: 1px solid #451345 ;
   
 }
@@ -122,11 +134,10 @@ button:hover{
   
   .dash-right {
     display: flex;
-    width: 60%;
+    width: max-content;
     height: fit-content;
+    margin: 0 auto;
     /* background-color: #b36b5d; */
-    position: relative;
-    left: 40vh;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,8 +149,8 @@ button:hover{
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
-    bottom: 70px;
+    /* position: relative;
+    bottom: 70px; */
     
   }
   
@@ -147,9 +158,9 @@ button:hover{
     color: #b36b5d;
     font-weight: 300;
     font-size: 1.2rem;
-    position: relative;
-    /* left: 0px; */
-    top: 70px;
+    /* position: relative;
+    left: 0px; 
+    top: 70px; */
   }
 
   .hello h3 span {
@@ -209,7 +220,7 @@ body {
 } */
 
 .dash-right .avisos {
-  width: 100%;
+  width: max-content;
   /* border: 3px solid pink; */
   color: #000000;
   /* font-family: "Exo 2", sans-serif;
@@ -218,12 +229,11 @@ body {
 
 .dash-right .avisos .container {
   display: flex;
+  width: 1000px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  position: relative;
-  /* top: 160px; */
+  padding: 0 30px 30px 30px;
 }
 
 .dash-right .avisos .container .div-form {
@@ -235,8 +245,27 @@ body {
   width: 100%;
 }
 
+.dash-right .avisos .container h1 {
+  color: #000000;
+  font-size: 50px;
+}
+
+.banner .container h1{
+  font-size: 50px;
+  color: rgb(179,107,93);
+}
+
+.dash-right .avisos .container h2 {
+  color:#b36b5d;
+  text-align: center;
+  font-size: 50px;
+  font-family: Archivo;
+}
+
+
 .dash-right .avisos .div-form label {
   width: 100%;
+  font-size: 20px;
 }
 
 .dash-right .avisos .div-form input {
@@ -246,8 +275,9 @@ body {
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
+  height: 100px;
   /* color: #E6005A; */
-  border: 3px solid #b36b5d;
+  border: 3px solid #000000;
   background-color: white;
   border-radius: 2px;
 }
@@ -260,13 +290,16 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #000000;
+  color: #FFFFFF;
+  background-color: #b36b5d;
   width: 120px;
+  font-family: Archivo;
+  position: relative;
+  left: 438px;
 } 
 
 .dash-right .avisos .div-form button:hover{
-  background-color: #b36b5d;
+  background-color: #000000;
   color: #FFFFFF;
 }
 
@@ -290,7 +323,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #000000;
+  border-bottom: 3px solid #b36b5d;
   padding: 20px;
 }
 
@@ -303,9 +336,10 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #b36b5d;
+  background-color: #000000;
   border-radius: 5px;
   margin-bottom: 80px;
+  color: #FFFFFF;
 }
 
 .div-buttons {
@@ -325,9 +359,6 @@ body {
 
 .dash {
   width: 75%;
-  position: relative;
-  top: 0;
-  left: 25%;
   background-color: #161618;
 
   /* width: 75%;
@@ -347,25 +378,7 @@ body {
   margin-top: 30px;
 }
 
-.perigo-frio {
-  background-color: #5c6bc0;
-}
 
-.perigo-quente {
-  background-color: #ff7043;
-}
-
-.alerta-frio {
-  background-color: #42a5f5;
-}
-
-.alerta-quente {
-  background-color: #ffee58;
-}
-
-.ideal {
-  background-color: #9ccc65;
-}
 
 .item-regua {
   padding: 5px;
@@ -453,11 +466,14 @@ body {
 }
 
 #sel_musicas {
-
+  font-family: Archivo;
+  font-size: 15px;
   text-align: center;
   border-radius: 20px;
   background-color: #000000;
   color: #FFFFFF;
+  padding: 10px 15px;
+  width: 200px;
 }
 
 /* .msg{
@@ -516,6 +532,13 @@ body {
   text-align: center;
 }
 
+#video{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 0 auto;
+}
+
 .videos_de_musicas{
   height: 10vh;
   text-align: center;
@@ -541,15 +564,12 @@ body {
 
 .banner .container {
   /* border: 3px solid green; */
-  height: 300px;
   /* display: flex; */
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px;
-  position: relative;
-  top: 20px;
+  padding: 0 50px 50px 50px;
 }
 
 .banner img {
