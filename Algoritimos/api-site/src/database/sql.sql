@@ -28,9 +28,9 @@ CREATE TABLE medida (
 
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+CREATE DATABASE alem_do_rap;
 
-USE acquatec;
+USE alem_do_rap;
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -89,7 +89,7 @@ contador int
 );
 
 insert into quantidade (fk_musica,contador)
-values (1,10),(2,15),(3,20),(4,25),(5,30),(6,35);            
+values (1,9),(2,15),(3,7),(4,11),(5,19),(6,5);            
 
 select * from quantidade;
 
