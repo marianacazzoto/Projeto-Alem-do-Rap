@@ -18,7 +18,7 @@ body {
 }
 
 .header{
-    color: #b36b5d;
+    color: rgb(179, 107, 93);
     box-shadow: 13px -5px 10px;
     position: sticky;
     top: 0;
