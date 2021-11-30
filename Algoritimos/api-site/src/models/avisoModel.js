@@ -18,7 +18,7 @@ FROM comentarios co
     INNER JOIN usuario u
         ON co.fk_usuario = u.id
         INNER JOIN musicas mu 
-        ON co.fk_musica = mu.id;
+        ON co.fk_musica = mu.id  order by co.id desc;
     `;
   console.log('Executando a instrução SQL: \n' + instrucao);
   return database.executar(instrucao);

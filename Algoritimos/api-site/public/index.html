@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body allow="autoplay">
+
+
+  
+ 
+
     <div class="header">
         <div class="container">
             <img src="./assets/Inserir_um_título__2_-removebg-preview.png" class="imagemlogo" alt="imagem logo">
@@ -36,11 +41,11 @@
                 <div class="texto">
                     <h1>O Projeto Além do Rap</h1>
                     <p>
-                        O RAP veio com o intuito de igualar as classes sociais,porém muitas pessoas ainda fecham as portas para esse estilo musical, sem ao menos ouvir.O Projeto Além do Rap, busca mostrar o poder tranformador que uma letra de rap pode ter. Por decadas esse genero tem influenciado e ajudado diversas pessoas em diferentes aspectos da vida.
+                        O RAP veio com o intuito de igualar as classes sociais, porém muitas pessoas ainda fecham as portas para esse estilo musical, sem ao menos ouvir. Pensando nisso, inicia-se o Projeto Além do Rap, que busca desmonstrar seu poder tranformador, exemplo disso são os artistas, que em sua maioria cantam musicas citando um processo de mudança. 
                     </p>
         
                     <p>
-                        O RAP veio com o intuito de igualar as classes sociais,porém muitas pessoas ainda fecham as portas para esse estilo musical, sem ao menos ouvir.O Projeto Além do Rap, busca mostrar o poder tranformador que uma letra de rap pode ter. Por decadas esse genero tem influenciado e ajudado diversas pessoas em diferentes aspectos da vida.
+                      Por décadas esse gênero tem influenciado e ajudado diversas pessoas em diferentes aspectos da vida.
                     </p>
 
                     
@@ -50,6 +55,10 @@
             </div>
             </div>
         </div>
+
+        <audio id="mpeg" autoplay>
+          <source src="./assets/WhatsApp Audio 2021-11-30 at 14.18.36.mpeg" type="audio/mpeg">
+        </audio>
 
         <div class="depoimentos">
             <div class="container">
@@ -130,7 +139,11 @@
 
  <script>
 
-   buscargrafico()
+   buscargrafico();
+  window.onload = () => {
+    document.getElementById('mpeg').play();
+
+  }
 //     var slideIndex = 0;
 // showSlides();
 
