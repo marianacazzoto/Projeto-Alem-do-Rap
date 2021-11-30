@@ -7,7 +7,8 @@
     <title>Cruzadinha</title>
     <link rel="stylesheet" href="./cruzadinha.css">
 </head>
-<body>
+<body onload="nome()">
+
     <div class="header">
         <div class="container">
 
@@ -50,6 +51,8 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td></td> 
             <td></td>
             <td></td>
@@ -61,39 +64,19 @@
         </tr>
 
         <tr align="center">
-            <td>
-                <span>7</span> 
-            </td>
-            <td>
-                <input id="p_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="s_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="i_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="c_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="o_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="d_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="e_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="l_psicodelic" type="text">
-            </td>
-            <td>  
-                <input id="i2_psicodelic" type="text">
-            </td>
-            <td>
-                <input id="c2_psicodelic" type="text" onchange="psicodelic()">
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td>
                 <input id="f_facavaler" type="text">
@@ -101,6 +84,8 @@
         </tr>
 
         <tr align="center" >
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -127,6 +112,8 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td>
                 <span>10</span>
             </td>
@@ -145,6 +132,8 @@
         </tr>
 
         <tr align="center">
+            <td></td>
+            <td></td>
             <td></td>
             <td>
                 <span>3</span>
@@ -180,6 +169,8 @@
         </tr>
 
         <tr align="center">
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td>
@@ -231,6 +222,8 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td>
                 <span>9</span>
             </td>
@@ -261,6 +254,8 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td>
                 <input id="o_sabotagem" type="text">
             </td>
@@ -281,6 +276,8 @@
         </tr>
 
         <tr align="center">
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -322,6 +319,8 @@
         </tr>
 
         <tr align="center">
+            <td></td>
+            <td></td>
             <td></td>   
             <td></td>
             <td></td>
@@ -350,6 +349,8 @@
         </tr>
 
         <tr align="center">
+            <td></td>
+            <td></td>
             <td></td> 
             <td></td> 
             <td></td>
@@ -377,6 +378,8 @@
         </tr>
 
         <tr align="center">
+            <td></td>
+            <td></td>
             <td></td> 
             <td></td> 
             <td></td> 
@@ -422,6 +425,8 @@
 
         <tr align="center">
             <td></td>
+            <td></td>
+            <td></td>
             <td></td> 
             <td></td> 
             <td></td> 
@@ -444,16 +449,40 @@
             <td></td> 
 
             <tr align="center">
-                <td></td> 
-                <td></td> 
-                <td></td> 
-                <td></td> 
-                <td></td> 
-                <td></td>
+                <td>
+                    <span>7</span>
+                </td>
                 <td></td>
                 <td>
-                    <input id="l2_mv_bill" type="text" onchange="mvbill()" >
+                    <input id="p_psicodelic" type="text">
+                </td>
+                <td>
+                    <input id="s_psicodelic" type="text">
                 </td> 
+                <td>
+                    <input id="i_psicodelic" type="text">
+                </td> 
+                <td>
+                    <input id="c_psicodelic" type="text">
+                </td> 
+                <td>
+                    <input id="o_psicodelic" type="text">
+                </td> 
+                <td>
+                    <input id="d_psicodelic" type="text">
+                </td> 
+                <td>
+                    <input id="e_psicodelic" type="text">
+                </td>
+                <td>
+                    <input id="l2_mv_bill" type="text" onchange="mvbill()" >
+                </td>
+                <td>
+                    <input id="i2_psicodelic" type="text">
+                </td> 
+                <td>  
+                    <input id="c2_psicodelic" type="text" onchange="psicodelic()">
+                </td>      
             </tr>
     </table>     
 </div>  
@@ -464,6 +493,11 @@
 </html>
 
 <script>
+
+function nome(){
+        var nome_usuario = sessionStorage.getItem("NOME_USUARIO");
+        b_usuario.innerHTML = nome_usuario;
+    }
 
 function facavaler() {
         if (f_facavaler.value != 'f' || a_facavaler.value != 'a' || c_facavaler.value != 'ç' || a2_facavaler.value != 'a' || v_facavaler.value != 'v' || a3_facavaler.value != 'a' || l_lennon.value != 'l' || e_facavaler.value != 'e' || r_facavaler.value != 'r') {
@@ -676,7 +710,7 @@ function facavaler() {
     }    
 
     function psicodelic() {
-        if (p_psicodelic.value != 'p' || s_psicodelic.value != 's' || i_psicodelic.value != 'i' || c_psicodelic.value != 'c' || o_psicodelic.value != 'o' || d_psicodelic.value != 'd' || e_psicodelic.value != 'e' || l_psicodelic.value != 'l' |i2_psicodelic.value != 'i' || c2_psicodelic.value != 'c') {
+        if (p_psicodelic.value != 'p' || s_psicodelic.value != 's' || i_psicodelic.value != 'i' || c_psicodelic.value != 'c' || o_psicodelic.value != 'o' || d_psicodelic.value != 'd' || e_psicodelic.value != 'e' || l2_mv_bill.value != 'l' |i2_psicodelic.value != 'i' || c2_psicodelic.value != 'c') {
 
             p_psicodelic.style.background='#ff6961';
             s_psicodelic.style.background='#ff6961'; 
@@ -685,7 +719,7 @@ function facavaler() {
             o_psicodelic.style.background='#ff6961';
             d_psicodelic.style.background='#ff6961';
             e_psicodelic.style.background='#ff6961';
-            l_psicodelic.style.background='#ff6961';
+            l2_mv_bill.style.background='#ff6961';
             i2_psicodelic.style.background='#ff6961';
             c2_psicodelic.style.background='#ff6961';
 
@@ -696,7 +730,7 @@ function facavaler() {
             o_psicodelic.value='';
             d_psicodelic.value='';
             e_psicodelic.value='';
-            l_psicodelic.value='';
+            l2_mv_bill.value='';
             i2_psicodelic.value='';
             c2_psicodelic.value='';
            
@@ -710,7 +744,7 @@ function facavaler() {
             o_psicodelic.style.background='#77dd77';
             d_psicodelic.style.background='#77dd77';
             e_psicodelic.style.background='#77dd77';
-            l_psicodelic.style.background='#77dd77';
+            l2_mv_bill.style.background='#77dd77';
             i2_psicodelic.style.background='#77dd77';
             c2_psicodelic.style.background='#77dd77';
         }

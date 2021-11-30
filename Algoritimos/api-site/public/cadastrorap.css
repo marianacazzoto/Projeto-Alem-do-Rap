@@ -112,6 +112,7 @@ button {
     bottom: 10px;
     font-family: Archivo;
     color: #000000;
+    font-weight: 400;
 }
 
 .banner-login a {

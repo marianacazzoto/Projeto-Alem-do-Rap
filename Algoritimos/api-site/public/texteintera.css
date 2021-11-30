@@ -148,19 +148,13 @@ button:hover{
   .hello {
     width: 100%;
     display: flex;
-    justify-content: center;
-    /* position: relative;
-    bottom: 70px; */
-    
+    justify-content: center;    
   }
   
   .hello h3 {
     color: #b36b5d;
     font-weight: 300;
     font-size: 1.2rem;
-    /* position: relative;
-    left: 0px; 
-    top: 70px; */
   }
 
   .hello h3 span {
@@ -247,12 +241,13 @@ body {
 
 .dash-right .avisos .container h1 {
   color: #000000;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .banner .container h1{
-  font-size: 50px;
+  font-size: 45px;
   color: rgb(179,107,93);
+  font-weight: 550;
 }
 
 .dash-right .avisos .container h2 {
@@ -265,7 +260,7 @@ body {
 
 .dash-right .avisos .div-form label {
   width: 100%;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .dash-right .avisos .div-form input {
@@ -532,7 +527,7 @@ body {
   text-align: center;
 }
 
-#video{
+.video{
   display: flex;
   flex-direction: column;
   width: max-content;
