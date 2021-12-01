@@ -19,7 +19,6 @@ body {
 
 .header{
   color: #000000;
-  /* height: 5vh; */
   box-shadow: 13px -5px 10px;
   position: sticky;
   top: 0;
@@ -46,7 +45,6 @@ body {
 }
 
 .seila h1{
-  /* font-weight: lighter; */
   margin: 0;
   height: max-content;
   color: #414141;
@@ -94,21 +92,6 @@ button:hover{
   background-color: #000000;
   color: #FFFFFF;
 }
-
-
-/* .imagemlogo {
-    height: 35vh; */
-    /* margin-right: 5%; */
-    /* padding: 15px; */
-/* } */
-
-/* .janela {
-    display: flex;
-    width: 90vw;
-    height: 100vh;
-    position: absolute;
-    top: 250px;
-  } */
   
   .header-left a {
     text-decoration: none;
@@ -128,8 +111,6 @@ button:hover{
     align-items: center;
     border-right: 3px solid #000000;
     background-color: #000000;
-    /* border: 3px solid pink; */
-    /* text-align: center; */
   }
   
   .dash-right {
@@ -137,11 +118,6 @@ button:hover{
     width: max-content;
     height: fit-content;
     margin: 0 auto;
-    /* background-color: #b36b5d; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
   }
   
   
@@ -164,7 +140,6 @@ button:hover{
   .btn-nav {
     width: 40%;
     color: white;
-    /* background-color: #e6005a; */
     border-radius: 5px;
     text-align: center;
     padding: 2% 5%;
@@ -192,13 +167,10 @@ button:hover{
   }
   
   .btn-logout {
-    /* margin: 0;
-    padding: 0; */
     height: 50px;
     background-color: #b36b5d;
     color: white;
     border-radius: 20px;
-    /* text-align: center; */
     padding: 10px 15px;
     margin-bottom: 100px;
     cursor: pointer;
@@ -207,18 +179,9 @@ button:hover{
     top: 10px;
   }
 
-  
-/* *,
-body {
-  font-family: "Exo 2", sans-serif;
-} */
-
 .dash-right .avisos {
   width: max-content;
-  /* border: 3px solid pink; */
   color: #000000;
-  /* font-family: "Exo 2", sans-serif;
-  text-align: center; */
 }
 
 .dash-right .avisos .container {
@@ -346,8 +309,6 @@ body {
   margin-left: 30px;
 }
 
-/* pagina graficos */
-
 .dash-header {
   background-color: #212124;
 }
@@ -355,13 +316,6 @@ body {
 .dash {
   width: 75%;
   background-color: #161618;
-
-  /* width: 75%;
-    display: flex;
-    background-color: #161618;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;*/
   height: 100vh;
 }
 
@@ -433,7 +387,6 @@ body {
   height: 30%;
   border-radius: 50px;
   margin-top: 6%;
-  /* background-color: #c7c7c7; */
 }
 
 .btns-dash {
@@ -471,13 +424,6 @@ body {
   width: 200px;
 }
 
-/* .msg{
-  color: #000000;
-  background-color: #b36b5d;
-  height: 60px;
-  width: 30px;
-} */
-
 .likes {
   display: flex;
   text-align: right;
@@ -494,7 +440,6 @@ body {
   height: 30px;
   position: relative;
   left: 40vh;
-  /* flex-direction: row; */
 }
 
 .sn_likes span{
@@ -509,10 +454,6 @@ body {
   padding: 10px;
   color: #000000;
 }
-
-/* .span #levanta span{
-  padding: 10px;
-} */
 
 .container img {
   height: 30vh;
@@ -558,8 +499,6 @@ body {
 } 
 
 .banner .container {
-  /* border: 3px solid green; */
-  /* display: flex; */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -571,34 +510,5 @@ body {
   height: 300px;
 }
 
-/* .footer {
-  background-color: #b36b5d;
-  height: 20px;
-  margin: 0; */
-  /* margin-top: px; */
-  /* padding: 15px; 
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center;  
-  font-family: Chivo;
-  color: #FFFFFF;
-}   */
-/* 
-.footer .container {
-  display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    height: max-content;
-} */
 
-/* .footer .container span{
-  padding: 0;
-  font-size: 15px;
-}
-
-.footer .container img{
-  height: 30px;
-  margin: 0 15px;
-} */
 

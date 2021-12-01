@@ -36,7 +36,6 @@
             <div class="quemsomos">
                 <h1></h1>
                     <input id="text" placeholder="Pesquisar" onchange="pesquisar()" ><br>
-                    <!-- <img src="./assets/lupa.png" alt="imagem de lupa"> -->
                     <div class="pesquisadas">
                         <div id="emalta" style="display: block;">
                             <div class="text">
@@ -114,7 +113,7 @@
         var pesqui_musica = ['racionais','coruja bc1','emicida','djonga'];
         
         if(pesqui_musica.indexOf(text.value) == -1){
-            alert('OPS! AINDA NÃO TEMOS ESSA NA NOSSA PLAYLIST');
+            alert('OPS! AINDA NÃO TEMOS ESSA OPÇÃO NA NOSSA PLAYLIST');
             emalta.style.display = 'block';
             racionais.style.display = 'none';
             coruja.style.display = 'none';
@@ -123,7 +122,7 @@
         }
         
         else {
-            alert('TRANSFORME SEU OUVIDO UMA NOVA VERSÃO VEM AÍ')
+            alert('TRANSFORME SEU OUVIDO: UMA NOVA VERSÃO VEM AÍ')
             
             if(text.value == 'racionais'){
                 racionais.style.display = 'block';

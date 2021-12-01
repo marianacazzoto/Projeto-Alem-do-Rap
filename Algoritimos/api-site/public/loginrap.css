@@ -86,14 +86,10 @@ button:hover{
 .banner-login {
     color: white;
     height: 550px;
-    /* border: 3px solid yellow; */
-    /* background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
-    background-size: cover; */
   }
   
   .banner-login .container {
     height: 550px;
-    /* border: 3px solid green; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,10 +105,8 @@ button:hover{
     width: 75vh;
     display: flex;
     justify-content: center;
-    /* align-content: space-around; */
     align-items: center;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     border-radius: 30px;
   }
 
@@ -185,7 +179,6 @@ input {
     background-color: #b36b5d;
     height: 20px;
     margin: 0;
-    /* margin-top: px; */
     padding: 15px; 
     display: flex;
     justify-content: space-evenly; 

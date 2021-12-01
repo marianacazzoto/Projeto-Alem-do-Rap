@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - Além do Rap</title>
+    <link rel="icon" href="./assets/ALÉM DO RAP.png">
+    <script src="./js/funcoes.js"></script>
     <link rel="stylesheet" href="./indexrap.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body allow="autoplay">
 
-
-  
- 
-
     <div class="header">
         <div class="container">
             <img src="./assets/Inserir_um_título__2_-removebg-preview.png" class="imagemlogo" alt="imagem logo">
             <ul class="navbar">
                 <li class="selecionado">HOME</li>
-                <!-- <li> <a href="#">EVENTOS</a></li> -->
                 <li>|</li>
                 <li><a href="./cadastro.html"> <button onclick="cadastre()">CADASTRE-SE</button></a> </li>
                 <li> <a href="./login.html">LOGIN</a></li>
             </ul>
         </div>
     </div>
+
+    <audio id="mpeg" autoplay>
+      <source src="./assets/WhatsApp Audio 2021-11-30 at 20.46.20.mpeg" type="audio/mpeg">
+    </audio>
 
     <div class="banner">
         <div class="container">
@@ -41,54 +42,43 @@
                 <div class="texto">
                     <h1>O Projeto Além do Rap</h1>
                     <p>
-                        O RAP veio com o intuito de igualar as classes sociais, porém muitas pessoas ainda fecham as portas para esse estilo musical, sem ao menos ouvir. Pensando nisso, inicia-se o Projeto Além do Rap, que busca desmonstrar seu poder tranformador, exemplo disso são os artistas, que em sua maioria cantam musicas citando um processo de mudança. 
+                      O RAP veio com o intuito de igualar as classes sociais, mas muitas pessoas fecham as portas para esse estilo musical, sem ao menos ouvir. A sociedade, infelizmente, ainda está dominada pelo preconceito. <br><br>
+                      Pensando nos estigmas que se originaram no início da criação do RAP,  nasce o Projeto Além do Rap, onde é voltado para todo e qualquer usuário que se interessa ou deseja conhecer sobre o tema, busca demonstrar  o poder transformador  que o estilo musical pode trazer, exemplo disso são os artistas, que em sua maioria cantam músicas citando um processo de mudança. 
+                      Evidenciando que o RAP vai muito além do preconceito que foi gerado em seu surgimento e instiga as pessoas (usuários),a querer conhecer detalhadamente o que é  o rap, antes de julgar.
+                      
                     </p>
-        
-                    <p>
-                      Por décadas esse gênero tem influenciado e ajudado diversas pessoas em diferentes aspectos da vida.
-                    </p>
-
-                    
-                  </div>
-                  
+                </div>    
             </div>
-            </div>
-            </div>
+          </div>
         </div>
+      </div>
 
-        <audio id="mpeg" autoplay>
-          <source src="./assets/WhatsApp Audio 2021-11-30 at 14.18.36.mpeg" type="audio/mpeg">
-        </audio>
+       
 
         <div class="depoimentos">
             <div class="container">
                 <div class="artistas">
-                    <!-- Slideshow container -->
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
+      <div class="numbertext">1 / 4</div>
       <img src="./assets/Component 8.png" style="width:100%">
-      <!-- <div class="text">Caption Text</div> -->
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
+      <div class="numbertext">2 / 4</div>
       <img src="./assets/Component 7.png" style="width:110%">
-      <!-- <div class="text">Caption Two</div> -->
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
+      <div class="numbertext">3 / 4</div>
       <img src="./assets/Component 9.png" style="width:100%">
-      <!-- <div class="text">Caption Three</div> -->
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
+      <div class="numbertext">4 / 4</div>
       <img src="./assets/Component 11.png" style="width:100%">
-      <!-- <div class="text">Caption Three</div> -->
     </div>
   
     <!-- Next and previous buttons -->
@@ -142,22 +132,8 @@
    buscargrafico();
   window.onload = () => {
     document.getElementById('mpeg').play();
-
   }
-//     var slideIndex = 0;
-// showSlides();
 
-// function showSlides() {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1}
-//   slides[slideIndex-1].style.display = "block";
-//   setTimeout(showSlides, 3000); // Change image every 2 seconds
-// } 
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -188,82 +164,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-function initComparisons() {
-  var x, i;
-  /* Find all elements with an "overlay" class: */
-  x = document.getElementsByClassName("img-comp-overlay");
-  for (i = 0; i < x.length; i++) {
-    /* Once for each "overlay" element:
-    pass the "overlay" element as a parameter when executing the compareImages function: */
-    compareImages(x[i]);
-  }
-  function compareImages(img) {
-    var slider, img, clicked = 0, w, h;
-    /* Get the width and height of the img element */
-    w = img.offsetWidth;
-    h = img.offsetHeight;
-    /* Set the width of the img element to 50%: */
-    img.style.width = (w / 2) + "px";
-    /* Create slider: */
-    slider = document.createElement("DIV");
-    slider.setAttribute("class", "img-comp-slider");
-    /* Insert slider */
-    img.parentElement.insertBefore(slider, img);
-    /* Position the slider in the middle: */
-    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
-    /* Execute a function when the mouse button is pressed: */
-    slider.addEventListener("mousedown", slideReady);
-    /* And another function when the mouse button is released: */
-    window.addEventListener("mouseup", slideFinish);
-    /* Or touched (for touch screens: */
-    slider.addEventListener("touchstart", slideReady);
-     /* And released (for touch screens: */
-    window.addEventListener("touchend", slideFinish);
-    function slideReady(e) {
-      /* Prevent any other actions that may occur when moving over the image: */
-      e.preventDefault();
-      /* The slider is now clicked and ready to move: */
-      clicked = 1;
-      /* Execute a function when the slider is moved: */
-      window.addEventListener("mousemove", slideMove);
-      window.addEventListener("touchmove", slideMove);
-    }
-    function slideFinish() {
-      /* The slider is no longer clicked: */
-      clicked = 0;
-    }
-    function slideMove(e) {
-      var pos;
-      /* If the slider is no longer clicked, exit this function: */
-      if (clicked == 0) return false;
-      /* Get the cursor's x position: */
-      pos = getCursorPos(e)
-      /* Prevent the slider from being positioned outside the image: */
-      if (pos < 0) pos = 0;
-      if (pos > w) pos = w;
-      /* Execute a function that will resize the overlay image according to the cursor: */
-      slide(pos);
-    }
-    function getCursorPos(e) {
-      var a, x = 0;
-      e = (e.changedTouches) ? e.changedTouches[0] : e;
-      /* Get the x positions of the image: */
-      a = img.getBoundingClientRect();
-      /* Calculate the cursor's x coordinate, relative to the image: */
-      x = e.pageX - a.left;
-      /* Consider any page scrolling: */
-      x = x - window.pageXOffset;
-      return x;
-    }
-    function slide(x) {
-      /* Resize the image: */
-      img.style.width = x + "px";
-      /* Position the slider: */
-      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-    }
-  }
-}
+
 
 initComparisons();
 
