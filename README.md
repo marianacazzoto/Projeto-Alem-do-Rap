@@ -6,3 +6,10 @@ Mesmo não sendo aceito por boa parte da sociedade, com algum custo, essa verten
 Hoje em dia muitos usam suas letras como trabalho e existe um julgamento social, como se não fosse um emprego digno e honesto. Os movimentos culturais são frequentemente alvo de operações policiais. Denúncias de moradores que marginalizam a cultura e generalizam todos, por atitudes isoladas que não representam o movimento.
 O RAP veio com o intuito de igualar as classes sociais, mas muitas pessoas fecham as portas para esse estilo musical, sem ao menos ouvir. A sociedade, infelizmente, ainda está dominada pelo preconceito, mas temos que plantar a aceitação e compreensão com atitudes que agreguem, atenção e respeito.
 
+<div style="display: inline_block"><br>
+  
+  <img align="center" alt="mariana-HTML"  src="https://github.com/marianacazzoto/Projeto-Alem-do-Rap/blob/main/Algoritimos/api-site/public/assets/homesite.png">
+ 
+</div>
+
+
